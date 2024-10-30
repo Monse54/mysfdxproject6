@@ -20,7 +20,6 @@ jobs:
       - name: Update Files
         run: |
           # Example: Add the date to a file called `log.txt` in the root directory
-          sudo apt-get update && apt-get install -y curl tar xz-utils 
           sudo curl "https://developer.salesforce.com/media/salesforce-cli/sf/channels/stable/sf-linux-x64.tar.xz" -o "my-sfdx-package.tar.xz"
           sudo tar -xvf my-sfdx-package.tar.xz
           sudo PATH="$PATH:/sf/bin
