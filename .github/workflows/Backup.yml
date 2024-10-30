@@ -19,9 +19,12 @@ jobs:
       # Step 2: Make the file updates
       - name: Update Files
         run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq curl tar xz-utils 
           curl -s "https://developer.salesforce.com/media/salesforce-cli/sf/channels/stable/sf-linux-x64.tar.xz" -o "my-sfdx-package.tar.xz"
-          tar -xvf my-sfdx-package.tar.xz
-          PATH="$PATH:/sf/bin
+          tar -xf my-sfdx-package.tar.xz > /dev/null 2>&1
+          chmod -R 755 sf
+          export PATH="$PATH:$(pwd)/sf/bin"
+          sf --version || echo "Salesforce CLI installation failed"
           echo "${{ secrets.SF_PRIVATE_KEY }}" > ./private.key
           chmod 600 ./private.key
           sf org login jwt --username "${{vars.EMAIL}}" --jwt-key-file "${{secrets.SF_PRIVATE_KEY}}" --client-id "${{vars.CLIENTID}}"
