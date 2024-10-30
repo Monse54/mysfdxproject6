@@ -19,7 +19,6 @@ jobs:
       # Step 2: Make the file updates
       - name: Update Files
         run: |
-
           curl "https://developer.salesforce.com/media/salesforce-cli/sf/channels/stable/sf-linux-x64.tar.xz" -o "my-sfdx-package.tar.xz"
           tar -xvf my-sfdx-package.tar.xz
           PATH="$PATH:/sf/bin
