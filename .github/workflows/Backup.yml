@@ -19,13 +19,13 @@ jobs:
       # Step 2: Make the file updates
       - name: Update Files
         run: |
-          # Example: Add the date to a file called `log.txt` in the root directory
-          sudo curl "https://developer.salesforce.com/media/salesforce-cli/sf/channels/stable/sf-linux-x64.tar.xz" -o "my-sfdx-package.tar.xz"
-          sudo tar -xvf my-sfdx-package.tar.xz
-          sudo PATH="$PATH:/sf/bin
-          sudo echo "${{ secrets.SF_PRIVATE_KEY }}" > ./private.key
-          sudo chmod 600 ./private.key
-          sudo sf org login jwt --username "${{vars.EMAIL}}" --jwt-key-file "${{secrets.SF_PRIVATE_KEY}}" --client-id "${{vars.CLIENTID}}"
+
+          curl "https://developer.salesforce.com/media/salesforce-cli/sf/channels/stable/sf-linux-x64.tar.xz" -o "my-sfdx-package.tar.xz"
+          tar -xvf my-sfdx-package.tar.xz
+          PATH="$PATH:/sf/bin
+          echo "${{ secrets.SF_PRIVATE_KEY }}" > ./private.key
+          chmod 600 ./private.key
+          sf org login jwt --username "${{vars.EMAIL}}" --jwt-key-file "${{secrets.SF_PRIVATE_KEY}}" --client-id "${{vars.CLIENTID}}"
 
       # Step 3: Commit the changes
       - name: Commit changes
