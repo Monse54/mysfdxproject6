@@ -27,7 +27,7 @@ jobs:
           sf --version || echo "Salesforce CLI installation failed"
           echo "${{ secrets.SF_PRIVATE_KEY }}" > ./private.key
           chmod 600 ./private.key
-          sf org login jwt --username "${{vars.EMAIL}}" --jwt-key-file "${{secrets.SF_PRIVATE_KEY}}" --client-id "${{vars.CLIENTID}}"
+          sf org login jwt --username "${{vars.EMAIL}}" --jwt-key-file "./private.key" --client-id "${{vars.CLIENTID}}"
 
       # Step 3: Commit the changes
       - name: Commit changes
