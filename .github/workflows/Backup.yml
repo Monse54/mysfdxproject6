@@ -3,7 +3,7 @@ name: Salesforce Backup
 on:
   push:
     branches:
-      - main  # Trigger this workflow on a push to the main branch
+      - master  # Trigger this workflow on a push to the main branch
   schedule:
     - cron: '0 0 * * *'  # Optional: Schedule to run daily at midnight (UTC)
 
