@@ -32,11 +32,11 @@ jobs:
       # Step 3: Commit the changes
       - name: Commit changes
         run: |
-          sf project retrieve start --target-org ${{vars.EMAIL}} --manifest package.xml
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          git commit -m "Automated update files on $(date)" || echo "No changes to commit"
+          sudo sf project retrieve start --target-org ${{vars.EMAIL}} --manifest package.xml
+          sudo git config --global user.name "github-actions[bot]"
+          sudo git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          sudo git add .
+          sudo git commit -m "Automated update files on $(date)" || echo "No changes to commit"
       # Step 4: Push the changes back to the repository
       - name: Push changes
         env:
