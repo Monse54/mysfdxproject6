@@ -27,6 +27,7 @@ jobs:
           sf --version || echo "Salesforce CLI installation failed"
           echo "${{ secrets.SF_PRIVATE_KEY }}" > ./private.key
           chmod 600 ./private.key
+          ls
           sf org login jwt --username "${{vars.EMAIL}}" --jwt-key-file "./private.key" --client-id "${{vars.CLIENTID}}"
           sf project retrieve start --target-org ${{vars.EMAIL}} --manifest package.xml
           git config --global user.name "github-actions[bot]"
