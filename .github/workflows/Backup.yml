@@ -28,20 +28,11 @@ jobs:
           echo "${{ secrets.SF_PRIVATE_KEY }}" > ./private.key
           chmod 600 ./private.key
           sf org login jwt --username "${{vars.EMAIL}}" --jwt-key-file "./private.key" --client-id "${{vars.CLIENTID}}"
-
-      - name: Verify sf CLI installation
-        run: |
-          ls -l $(pwd)/sf/bin
-          which sf || echo "sf not found in PATH"
-          sf --version
-      # Step 3: Commit the changes
-      - name: Commit changes
-        run: |
-          sudo sf project retrieve start --target-org ${{vars.EMAIL}} --manifest package.xml
-          sudo git config --global user.name "github-actions[bot]"
-          sudo git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          sudo git add .
-          sudo git commit -m "Automated update files on $(date)" || echo "No changes to commit"
+          sf project retrieve start --target-org ${{vars.EMAIL}} --manifest package.xml
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Automated update files on $(date)" || echo "No changes to commit"
       # Step 4: Push the changes back to the repository
       - name: Push changes
         env:
