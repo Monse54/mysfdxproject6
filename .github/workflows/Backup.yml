@@ -29,6 +29,11 @@ jobs:
           chmod 600 ./private.key
           sf org login jwt --username "${{vars.EMAIL}}" --jwt-key-file "./private.key" --client-id "${{vars.CLIENTID}}"
 
+      - name: Verify sf CLI installation
+        run: |
+          ls -l $(pwd)/sf/bin
+          which sf || echo "sf not found in PATH"
+          sf --version
       # Step 3: Commit the changes
       - name: Commit changes
         run: |
