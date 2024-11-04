@@ -1,0 +1,50 @@
+<!--
+ - Created by cxu on 7/02/2017.
+ -->
+
+<aura:component description="OpportunityLineItem">
+    <aura:attribute name="item" type="OpportunityLineItem"></aura:attribute>
+    <aura:attribute name="entries" type="PricebookEntry[]"></aura:attribute>
+    <aura:attribute name="editMode" type="boolean"></aura:attribute>
+
+    <aura:registerEvent name="RemoveLineItem" type="c:RemoveLineItem"/>
+
+    <li class="slds-item slds-hint-parent" style="position: relative;">
+        <div class="slds-filters__item slds-grid slds-grid--vertical-align-center" onclick="{!c.togglePopover}">
+            <aura:if isTrue="{!v.item.PricebookEntryId == null}">
+                    <a href="javascript:void(0);" class="slds-grow slds-has-blur-focus">
+                        <p class="slds-text-body--small">New Item</p>
+                    </a>
+                <aura:set attribute="else">
+                    <a href="javascript:void(0);" class="slds-grow slds-has-blur-focus">
+                        <p class="slds-text-body--small">{!v.item.PricebookEntry.Product2.Name}</p>
+                        <p>{!v.item.Quantity} x <ui:outputCurrency value="{!v.item.UnitPrice}"></ui:outputCurrency></p>
+                    </a>
+                </aura:set>
+            </aura:if>
+            <aura:if isTrue="{!v.editMode}">
+                <button class="slds-button slds-button--icon slds-button--icon-small" title="Remove" onclick="{!c.removeItem}">
+                    <lightning:icon iconName="utility:close" class="slds-button__icon slds-button__icon--hint" size="x-small"></lightning:icon>
+                    <span class="slds-assistive-text">Remove</span>
+                </button>
+            </aura:if>
+        </div>
+        <section 
+                 class="slds-popover slds-nubbin--right-top popover hide" role="dialog" aria-describedby="{!v.item.Id}" aura:id="popover">
+            <button  onclick="{!c.togglePopover}"
+                    class="slds-button slds-button--icon-small slds-float--right slds-popover__close slds-button--icon" title="Close dialog">
+                <lightning:icon iconName="utility:close" class="slds-button__icon" size="x-small"></lightning:icon>
+                <span class="slds-assistive-text">Close dialog</span>
+            </button>
+            <div class="slds-popover__body" id="{!v.item.Id}">
+                <c:PricebookEntries entries="{!v.entries}" item="{!v.item}"></c:PricebookEntries>
+                <div class="slds-form-element">
+                    <ui:inputNumber value="{!v.item.Quantity}" aura:id="quantity" label="Quantity"></ui:inputNumber>
+                </div>
+                <div class="slds-form-element">
+                    <ui:inputCurrency value="{!v.item.UnitPrice}" aura:id="unitprice" label="Sales Price"></ui:inputCurrency>
+                </div>
+            </div>
+        </section>
+    </li>
+</aura:component>

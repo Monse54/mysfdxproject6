@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type of Request --></label>
+    <name>Type_of__c</name>
+    <picklistValues>
+        <masterLabel>Entertainment</masterLabel>
+        <translation><!-- Entertainment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Non-Entertainment</masterLabel>
+        <translation><!-- Non-Entertainment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Sure</masterLabel>
+        <translation><!-- Not Sure --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Test</masterLabel>
+        <translation><!-- Test --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

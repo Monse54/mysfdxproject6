@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Secondary KPI --></label>
+    <name>Secondary_KPI__c</name>
+    <picklistValues>
+        <masterLabel>App Engagement</masterLabel>
+        <translation><!-- App Engagement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>App Engagement - App Launches</masterLabel>
+        <translation><!-- App Engagement - App Launches --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>App install</masterLabel>
+        <translation><!-- App install --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Awareness/Unique Reach</masterLabel>
+        <translation><!-- Awareness/Unique Reach --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Brand Safety</masterLabel>
+        <translation><!-- Brand Safety --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CTR</masterLabel>
+        <translation><!-- CTR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Conversion (location attribution)</masterLabel>
+        <translation><!-- Conversion (location attribution) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Delivery In Full</masterLabel>
+        <translation><!-- Delivery In Full --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Delivery in Full - Evenly Pacing</masterLabel>
+        <translation><!-- Delivery in Full - Evenly Pacing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fraud</masterLabel>
+        <translation><!-- Fraud --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Frequency</masterLabel>
+        <translation><!-- Frequency --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In Geo</masterLabel>
+        <translation><!-- In Geo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tune in (show/movie)</masterLabel>
+        <translation><!-- Tune in (show/movie) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VCR</masterLabel>
+        <translation><!-- VCR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Viewability</masterLabel>
+        <translation><!-- Viewability --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

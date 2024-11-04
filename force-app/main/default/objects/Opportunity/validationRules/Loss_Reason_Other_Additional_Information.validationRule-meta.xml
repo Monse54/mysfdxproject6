@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loss_Reason_Other_Additional_Information</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISPICKVAL(Loss_Reason__c, &quot;Other&quot;),
+    ISBLANK(Other_Loss_Reason__c),
+    NOT(Skip_Validations__c)
+)</errorConditionFormula>
+    <errorDisplayField>Other_Loss_Reason__c</errorDisplayField>
+    <errorMessage>You must provide more detail for a Loss Reason &quot;Other&quot;.</errorMessage>
+</ValidationRule>

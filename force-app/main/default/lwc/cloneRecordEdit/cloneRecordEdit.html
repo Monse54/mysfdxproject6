@@ -1,0 +1,211 @@
+<template>
+  <lightning-modal-header label="Clone IO Placement"></lightning-modal-header>
+  <lightning-modal-body>
+    <div if:true={showspinner}>
+      <div class="exampleHolder">
+        <lightning-spinner
+          alternative-text="Loading"
+          size="medium"
+        ></lightning-spinner>
+      </div>
+    </div>
+
+    <template if:true={showerror}>
+      <div class="slds-notify slds-notify_alert slds-alert_error">
+        {errormessage}
+      </div>
+    </template>
+
+    <lightning-record-edit-form
+      record-id={recId}
+      object-api-name="OpportunityLineItem"
+      onsubmit={handleSubmit}
+    >
+      <lightning-messages> </lightning-messages>
+      <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input-field
+            field-name="OpportunityId"
+          ></lightning-input-field>
+        </div>
+        <div class="slds-col slds-size_1-of-2"></div>
+      </div>
+
+      <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input-field disabled
+            field-name="Product_Family__c"
+          ></lightning-input-field>
+        </div>
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input-field
+            field-name="Product_Full_Name__c"
+          ></lightning-input-field>
+        </div>
+      </div>
+
+      <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input-field
+            field-name="Product2Id"
+          ></lightning-input-field>
+        </div>
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input-field required = "True" field-name="IO_Product_Display_Name__c"></lightning-input-field>
+        </div>
+      </div>
+      <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input-field
+            field-name="Placement_Type__c"
+          ></lightning-input-field>
+        </div>
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input-field
+            field-name="Placement_Category__c"
+          ></lightning-input-field>
+        </div>
+      </div>
+      <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input-field
+            field-name="Device_Type__c"
+          ></lightning-input-field>
+        </div>
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input-field
+            field-name="Audience_Targeting__c"
+          ></lightning-input-field>
+        </div>
+      </div>
+      <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input-field
+            field-name="Type__c"          
+          ></lightning-input-field>
+        </div>
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input-field
+            field-name="Audience_Segment_Details__c"          
+          ></lightning-input-field>
+        </div>
+      </div>
+      <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input-field
+            field-name="Start_Date__c"
+          ></lightning-input-field>
+        </div>
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input-field
+            field-name="End_Date__c"
+          ></lightning-input-field>
+        </div>
+      </div>
+      <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input-field
+            field-name="Country__c"
+          ></lightning-input-field>
+        </div>
+        <div class="slds-col slds-size_1-of-2"></div>
+      </div>
+
+      <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input-field
+            field-name="Buy_Type__c"
+          ></lightning-input-field>
+        </div>
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input-field field-name="Rate__c"></lightning-input-field>
+        </div>
+      </div>
+      <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input-field
+            field-name="Original_Booking_Amount__c"
+          ></lightning-input-field>
+        </div>
+        <div class="slds-col slds-size_1-of-2"></div>
+      </div>
+
+      <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input-field
+            field-name="IO_Impression_Goal__c"
+          ></lightning-input-field>
+        </div>
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input-field
+            field-name="Product_Booking_Date__c"
+          ></lightning-input-field>
+        </div>
+      </div>
+
+      <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input-field
+            field-name="Day_Part__c"
+          ></lightning-input-field>
+        </div>
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input-field
+            field-name="Frequency_Cap__c"
+          ></lightning-input-field>
+        </div>
+      </div>
+      <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input-field
+            field-name="Rolling_Time_Zone__c"
+          ></lightning-input-field>
+        </div>
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input-field field-name="Reason__c"></lightning-input-field>
+        </div>
+      </div>
+      <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input-field
+            field-name="RB_Extension_Info__c"
+          ></lightning-input-field>
+        </div>
+        <div class="slds-col slds-size_1-of-2">
+         
+          <lightning-input-field
+            field-name="Max_Extension_Time__c"
+          ></lightning-input-field> 
+        </div>
+      </div>
+      <div class="slds-grid">
+        <div class="slds-col slds-size_2-of-2">
+           <lightning-input-field
+            field-name="BETA_Program__c"
+          ></lightning-input-field>
+
+
+        </div>
+      </div>
+      <center>
+        <lightning-button
+          label="Cancel"
+          onclick={handleOkay}
+        ></lightning-button>
+        <lightning-button variant="brand" type="submit" label="Save">
+          &nbsp;
+        </lightning-button>
+        <template if:true={showerror}>
+         <div class="slds-notify slds-notify_alert slds-alert_error">
+           {errormessage}
+         </div>
+       </template>
+      </center>
+    </lightning-record-edit-form>
+
+    <!--	<lightning-record-form object-api-name={objectName} columns="2" fields={Fields} onsubmit={handleSubmit} mode="edit"
+			record-id={recId} onsuccess={closePopupSuccess} oncancel={closePopup}>
+		</lightning-record-form> -->
+  </lightning-modal-body>
+  <lightning-modal-footer> </lightning-modal-footer>
+</template>

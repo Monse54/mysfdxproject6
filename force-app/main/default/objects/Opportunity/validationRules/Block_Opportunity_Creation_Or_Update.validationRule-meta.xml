@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Block_Opportunity_Creation_Or_Update</fullName>
+    <active>true</active>
+    <description>Block opportunity creating during account approval.</description>
+    <errorConditionFormula>AND(
+    NOT(Skip_Validations__c),
+    OR(
+        ISPICKVAL(Account.Account_Review_Status__c, &apos;In Review&apos;),
+        ISPICKVAL(Account.Account_Review_Status__c, &apos;Rejected&apos;),
+        ISPICKVAL(Agency__r.Account_Review_Status__c, &apos;In Review&apos;),
+        ISPICKVAL(Agency__r.Account_Review_Status__c, &apos;Rejected&apos;)
+    )
+)</errorConditionFormula>
+    <errorMessage>Cannot create or update an opportunity against a non approved account.</errorMessage>
+</ValidationRule>

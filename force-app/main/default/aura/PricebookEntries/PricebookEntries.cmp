@@ -1,0 +1,59 @@
+<!--
+ - Created by cxu on 7/02/2017.
+ -->
+
+<aura:component description="PricebookEntries">
+    <aura:attribute name="item" type="OpportunityLineItem"></aura:attribute>
+    <aura:attribute name="entries" type="PricebookEntry[]"></aura:attribute>
+    <aura:attribute name="filteredEntries" type="PricebookEntry[]" default="[]"></aura:attribute>
+    <aura:attribute name="searchString" type="string" default=""/>
+
+    <aura:handler name="change" value="{!v.item}" action="{!c.hideLookupMenu}"/>
+    <aura:handler name="change" value="{!v.searchString}" action="{!c.filterEntries}"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.initialise}"/>
+
+
+    <div class="slds-form-element slds-lookup" data-select="single" aura:id="search">
+        <label class="slds-form-element__label" for="{!v.item.Id}">Product</label>
+        <div class="slds-form-element__control">
+            <aura:if isTrue="{!v.item.PricebookEntryId == null}">
+                <div class="slds-input-has-icon slds-input-has-icon--right">
+                    <lightning:icon iconName="utility:search" class="slds-input__icon slds-icon-text-default"
+                                    size="x-small"></lightning:icon>
+                    <ui:inputText class="slds-lookup__search-input slds-input"
+                                  placeholder="Search Products" aura:id="filterInput" value="{!v.searchString}"
+                                  focus="{!c.showLookupMenu}" updateOn="keyup"
+                    />
+                </div>
+                <aura:set attribute="else">
+                    <div class="slds-pill_container">
+                        <span class="slds-pill slds-size--1-of-1">
+                            <lightning:icon iconName="standard:product"
+                                            class="slds-icon_container slds-icon-standard-product slds-pill__icon_container"></lightning:icon>
+                            <span class="slds-pill__label">{!v.item.PricebookEntry.Product2.Name}</span>
+
+                            <button class="slds-button slds-button--icon slds-pill__remove" title="Remove" onclick="{!c.removeProductSelection}">
+                                <lightning:icon class="slds-button__icon" iconName="utility:close" size="xx-small"></lightning:icon>
+                            </button>
+                        </span>
+                    </div>
+                </aura:set>
+            </aura:if>
+        </div>
+        <div class="slds-lookup__menu" id="{!v.item.Id}">
+            <ul class="slds-lookup__list" role="listbox">
+                <aura:if isTrue="{!equals(v.filteredEntries.length, 0)}">
+                    <li role="presentation" onclick="{!c.selectEntry}">
+                        <span class="slds-lookup__item-action slds-media" role="option">
+                            <div class="slds-lookup__result-text">No product contains "{!v.searchString}" found</div>
+                        </span>
+                    </li>
+                </aura:if>
+                <aura:iteration items="{!v.filteredEntries}" var="entry">
+                    <c:PricebookEntryItem item="{!v.item}" entry="{!entry}"></c:PricebookEntryItem>
+                </aura:iteration>
+            </ul>
+        </div>
+    </div>
+</aura:component>

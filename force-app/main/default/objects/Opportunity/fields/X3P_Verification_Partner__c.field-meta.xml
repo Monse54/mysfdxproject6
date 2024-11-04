@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X3P_Verification_Partner__c</fullName>
+    <label>3P Verification Partner</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Third Party Verification Required</fullName>
+                <default>true</default>
+                <label>No Third Party Verification Required</label>
+            </value>
+            <value>
+                <fullName>Doubleverify : Brand Safety</fullName>
+                <default>false</default>
+                <label>Doubleverify : Brand Safety</label>
+            </value>
+            <value>
+                <fullName>Doubleverify : Brand Suitability</fullName>
+                <default>false</default>
+                <label>Doubleverify : Brand Suitability</label>
+            </value>
+            <value>
+                <fullName>Doubleverify : Fraud</fullName>
+                <default>false</default>
+                <label>Doubleverify : Fraud</label>
+            </value>
+            <value>
+                <fullName>Doubleverify : Viewability</fullName>
+                <default>false</default>
+                <label>Doubleverify : Viewability</label>
+            </value>
+            <value>
+                <fullName>Doubleverify : Impressions</fullName>
+                <default>false</default>
+                <label>Doubleverify : Impressions</label>
+            </value>
+            <value>
+                <fullName>DoubleVerify - Out of Geo</fullName>
+                <default>false</default>
+                <label>DoubleVerify - Out of Geo</label>
+            </value>
+            <value>
+                <fullName>IAS : Brand Safety</fullName>
+                <default>false</default>
+                <label>IAS : Brand Safety</label>
+            </value>
+            <value>
+                <fullName>IAS : Brand Suitability</fullName>
+                <default>false</default>
+                <label>IAS : Brand Suitability</label>
+            </value>
+            <value>
+                <fullName>IAS : Fraud</fullName>
+                <default>false</default>
+                <label>IAS : Fraud</label>
+            </value>
+            <value>
+                <fullName>IAS : Viewability</fullName>
+                <default>false</default>
+                <label>IAS : Viewability</label>
+            </value>
+            <value>
+                <fullName>IAS : Impressions</fullName>
+                <default>false</default>
+                <label>IAS : Impressions</label>
+            </value>
+            <value>
+                <fullName>IAS - Out of Geo</fullName>
+                <default>false</default>
+                <label>IAS - Out of Geo</label>
+            </value>
+            <value>
+                <fullName>MOAT - Brand Safety</fullName>
+                <default>false</default>
+                <label>MOAT - Brand Safety</label>
+            </value>
+            <value>
+                <fullName>MOAT - Brand Suitability</fullName>
+                <default>false</default>
+                <label>MOAT - Brand Suitability</label>
+            </value>
+            <value>
+                <fullName>MOAT - Fraud</fullName>
+                <default>false</default>
+                <label>MOAT - Fraud</label>
+            </value>
+            <value>
+                <fullName>MOAT - Viewability</fullName>
+                <default>false</default>
+                <label>MOAT - Viewability</label>
+            </value>
+            <value>
+                <fullName>MOAT - Impressions</fullName>
+                <default>false</default>
+                <label>MOAT - Impressions</label>
+            </value>
+            <value>
+                <fullName>MOAT - Out of Geo</fullName>
+                <default>false</default>
+                <label>MOAT - Out of Geo</label>
+            </value>
+            <value>
+                <fullName>Innovid : Brand Safety</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Innovid : Brand Safety</label>
+            </value>
+            <value>
+                <fullName>Innovid : Brand Suitability</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Innovid : Brand Suitability</label>
+            </value>
+            <value>
+                <fullName>Innovid : Fraud</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Innovid : Fraud</label>
+            </value>
+            <value>
+                <fullName>Innovid : Impressions</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Innovid : Impressions</label>
+            </value>
+            <value>
+                <fullName>Innovid : Viewability</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Innovid : Viewability</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

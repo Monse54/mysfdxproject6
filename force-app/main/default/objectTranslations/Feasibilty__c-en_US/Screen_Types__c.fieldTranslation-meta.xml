@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Screen Types --></label>
+    <name>Screen_Types__c</name>
+    <picklistValues>
+        <masterLabel>All Screen</masterLabel>
+        <translation><!-- All Screen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CTV</masterLabel>
+        <translation><!-- CTV --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Desktop</masterLabel>
+        <translation><!-- Desktop --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mobile/Tablet</masterLabel>
+        <translation><!-- Mobile/Tablet --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

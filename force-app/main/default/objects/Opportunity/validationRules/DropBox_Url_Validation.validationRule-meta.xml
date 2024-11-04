@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DropBox_Url_Validation</fullName>
+    <active>true</active>
+    <description>Please ensure that the &apos;Dropbox URL&apos; field is filled in and begins with &apos;http://&apos; or &apos;https://&apos; to be valid.</description>
+    <errorConditionFormula>NOT(
+    OR(
+        BEGINS(Dropbox_URL__c, &quot;http://&quot;),
+        BEGINS(Dropbox_URL__c, &quot;https://&quot;),
+ISBLANK(Dropbox_URL__c)
+    )
+)</errorConditionFormula>
+    <errorMessage>Please ensure that the &apos;Dropbox URL&apos; field is filled in and begins with &apos;http://&apos; or &apos;https://&apos; to be valid.</errorMessage>
+</ValidationRule>

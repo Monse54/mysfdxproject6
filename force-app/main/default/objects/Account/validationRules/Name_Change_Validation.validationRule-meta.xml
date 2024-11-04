@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Name_Change_Validation</fullName>
+    <active>true</active>
+    <description>Non admin users can&apos;t change the name.</description>
+    <errorConditionFormula>AND(
+	!ISNEW(),
+	ISPICKVAL(Account_Review_Status__c, &apos;Approved&apos;),
+	ISCHANGED(Name),
+	$Profile.Name&lt;&gt;&apos;System Administrator&apos;
+)</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>You can&apos;t change the name, please contact system administrator.</errorMessage>
+</ValidationRule>

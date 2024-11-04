@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>For_3P_verification_partner</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+OR(
+ISPICKVAL(StageName, &quot;Proposal Submitted&quot;),
+ISPICKVAL(StageName, &quot;Negotiation&quot;),
+ISPICKVAL(StageName, &quot;Verbal Confirm&quot;),
+ISPICKVAL(StageName, &quot;Notification&quot;),
+ISPICKVAL(StageName, &quot;Waiting on Assets - Closed Won&quot;),
+ISPICKVAL(StageName, &quot;Closed Won&quot;),
+ISPICKVAL(StageName, &quot;Closed Lost&quot;)
+),
+ISBLANK(X3P_Verification_Partner__c),
+NOT(Skip_Validations__c),
+DATEVALUE(CreatedDate) &gt; DATEVALUE($Label.Opp_validation_effective_Date)
+
+)</errorConditionFormula>
+    <errorDisplayField>X3P_Verification_Partner__c</errorDisplayField>
+    <errorMessage>3P verification partner is required at the Proposal Submitted stage and later.</errorMessage>
+</ValidationRule>

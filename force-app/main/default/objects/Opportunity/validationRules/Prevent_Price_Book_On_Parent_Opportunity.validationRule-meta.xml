@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Price_Book_On_Parent_Opportunity</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    RecordType.DeveloperName = &apos;Parent_Opportunity&apos;,  
+    NOT(ISBLANK(Pricebook2Id)) 
+)</errorConditionFormula>
+    <errorMessage>Parent Opportunities cannot be associated with any price book, please clear out the price book field and continue</errorMessage>
+</ValidationRule>

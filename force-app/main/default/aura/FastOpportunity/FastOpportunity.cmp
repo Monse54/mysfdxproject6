@@ -1,0 +1,57 @@
+<!--
+ - Created by cxu on 7/02/2017.
+ -->
+
+<aura:component description="FastOpportunity" implements="flexipage:availableForRecordHome,force:hasRecordId"
+                access="global"
+                controller="FastOpportunityController">
+    <aura:attribute name="opportunity" type="Opportunity"></aura:attribute>
+    <aura:attribute name="pricebooks" type="Pricebook2[]"></aura:attribute>
+    <aura:attribute name="pricebookEntries" type="PricebookEntry[]"></aura:attribute>
+    <aura:attribute name="pricebookId" type="string"></aura:attribute>
+    <aura:attribute name="editMode" type="boolean" default="false"></aura:attribute>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <div class="slds-panel slds-grid slds-grid--vertical slds-nowrap">
+        <div class="slds-form--stacked slds-grow slds-grid slds-grid--vertical">
+            <div class="slds-filters">
+                <div class="slds-filters__header slds-grid slds-has-divider--bottom-space">
+                    <h4 class="slds-align-middle slds-text-heading--small">
+                        <lightning:icon iconName="standard:product" class="slds-icon_container slds-icon-standard-product" size="small"></lightning:icon>
+                        Fast Opportunity Products
+                    </h4>
+                    <aura:if isTrue="{! and(v.opportunity.Pricebook2Id != null, not(v.editMode))}">
+                        <ui:menu class="slds-col--bump-left">
+                            <ui:menuTriggerLink aura:id="trigger">
+                                <lightning:buttonIcon iconName="utility:down" variant="border-filled"></lightning:buttonIcon>
+                            </ui:menuTriggerLink>
+                            <ui:menuList class="actionMenu" aura:id="actionMenu">
+                                <ui:actionMenuItem aura:id="edit" label="Edit" click="{!c.enableEditMode}"/>
+                            </ui:menuList>
+                        </ui:menu>
+                    </aura:if>
+                </div>
+
+                <aura:if isTrue="{!v.opportunity.Pricebook2Id == null}">
+                    <div class="slds-filters__body">
+                        <ui:inputSelect label="Select a pricebook to proceed" aura:id="pricebookId" change="{!c.onPricebookChange}">
+                            <aura:iteration items="{!v.pricebooks}" var="pricebook">
+                                <ui:inputSelectOption text="{!pricebook.Id}" label="{!pricebook.Name}"></ui:inputSelectOption>
+                            </aura:iteration>
+                        </ui:inputSelect>
+                    </div>
+                    <div class="slds-filters__footer slds-grid slds-shrink-none" style="justify-content: center;">
+                        <lightning:button label="Select" onclick="{!c.updatePricebook}" variant="brand"></lightning:button>
+                    </div>
+                </aura:if>
+                <aura:if isTrue="{!v.opportunity.Pricebook2Id != null}">
+                    <div class="slds-filters__body">
+                        <c:OpportunityLineItems items="{!v.opportunity.OpportunityLineItems}" entries="{!v.pricebookEntries}"
+                                                recordId="{!v.recordId}" editMode="{!v.editMode}"></c:OpportunityLineItems>
+                    </div>
+                </aura:if>
+            </div>
+        </div>
+    </div>
+</aura:component>

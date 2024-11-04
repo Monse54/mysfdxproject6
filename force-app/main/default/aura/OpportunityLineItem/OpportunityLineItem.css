@@ -1,0 +1,13 @@
+/**
+ * Created by cxu on 8/02/2017.
+ */
+.THIS .popover {
+    position: absolute;
+    top: 0;
+    width: 80%;
+    left: -83%;
+}
+
+.THIS .hide {
+    display: none;
+}

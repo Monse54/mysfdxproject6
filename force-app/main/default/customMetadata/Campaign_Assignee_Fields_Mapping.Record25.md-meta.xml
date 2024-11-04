@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Record25</label>
+    <protected>false</protected>
+    <values>
+        <field>AM_Email__c</field>
+        <value xsi:type="xsd:string">kevin.trapp@lgads.tv</value>
+    </values>
+    <values>
+        <field>AM_Lead_Email__c</field>
+        <value xsi:type="xsd:string">nyal@lgads.tv</value>
+    </values>
+    <values>
+        <field>AM_Lead__c</field>
+        <value xsi:type="xsd:string">Nyal Rivera</value>
+    </values>
+    <values>
+        <field>Account_Manager_Name__c</field>
+        <value xsi:type="xsd:string">Kevin Trapp</value>
+    </values>
+    <values>
+        <field>Campaign_Manager_Email__c</field>
+        <value xsi:type="xsd:string">syed.saad@lgads.tv</value>
+    </values>
+    <values>
+        <field>Campaign_Manager__c</field>
+        <value xsi:type="xsd:string">Syed Saad</value>
+    </values>
+    <values>
+        <field>Seller_Email__c</field>
+        <value xsi:type="xsd:string">fallon@lgads.tv</value>
+    </values>
+    <values>
+        <field>Seller_Name__c</field>
+        <value xsi:type="xsd:string">Fallon Zatorski</value>
+    </values>
+    <values>
+        <field>Team_Lead__c</field>
+        <value xsi:type="xsd:string">abhishek@lgads.tv</value>
+    </values>
+    <values>
+        <field>TechOps_Email__c</field>
+        <value xsi:type="xsd:string">brooke.turk@lgads.tv</value>
+    </values>
+    <values>
+        <field>TechOps__c</field>
+        <value xsi:type="xsd:string">Brooke Turk</value>
+    </values>
+</CustomMetadata>

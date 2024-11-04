@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Feasibilty</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Feasibilities</value>
+    </caseValues>
+    <layouts>
+        <layout>Feasibilty Layout</layout>
+        <sections>
+            <label><!-- Buying --></label>
+            <section>Buying</section>
+        </sections>
+        <sections>
+            <label><!-- Creative --></label>
+            <section>Creative</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Info --></label>
+            <section>Info</section>
+        </sections>
+        <sections>
+            <label><!-- Schedules and Extra Notes --></label>
+            <section>Schedules and Extra Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Targetting --></label>
+            <section>Targetting</section>
+        </sections>
+        <sections>
+            <label><!-- Verification Study --></label>
+            <section>Verification Study</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

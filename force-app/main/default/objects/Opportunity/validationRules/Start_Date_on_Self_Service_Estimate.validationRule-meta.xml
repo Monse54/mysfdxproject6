@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Start_Date_on_Self_Service_Estimate</fullName>
+    <active>true</active>
+    <description>For Self Service opps, if user enters an estimated booking amount, they must enter flight dates</description>
+    <errorConditionFormula>Pricebook2.Name = &apos;Self Service&apos; &amp;&amp; NOT(ISBLANK(Estimated_Booking_Amount__c)) &amp;&amp; Estimated_Booking_Amount__c &gt; 0 &amp;&amp; 
+ISBLANK(Flight_Start_Date__c)</errorConditionFormula>
+    <errorDisplayField>Flight_Start_Date__c</errorDisplayField>
+    <errorMessage>Flight Start date must be selected for Self Service Opportunities if Estimated Booking Amount is entered.</errorMessage>
+</ValidationRule>

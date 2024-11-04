@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Net Terms --></label>
+    <name>Net_Terms__c</name>
+    <picklistValues>
+        <masterLabel>APEX</masterLabel>
+        <translation><!-- APEX --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Net 30</masterLabel>
+        <translation><!-- Net 30 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Net 45</masterLabel>
+        <translation><!-- Net 45 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Net 90</masterLabel>
+        <translation><!-- Net 90 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

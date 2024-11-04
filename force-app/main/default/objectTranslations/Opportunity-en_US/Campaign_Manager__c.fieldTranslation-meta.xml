@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Campaign Manager --></label>
+    <name>Campaign_Manager__c</name>
+    <picklistValues>
+        <masterLabel>Anjali Singh</masterLabel>
+        <translation><!-- Anjali Singh --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Balaji Ramana</masterLabel>
+        <translation><!-- Balaji Ramana --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Chaitanya Dupuguntla</masterLabel>
+        <translation><!-- Chaitanya Dupuguntla --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Daishon Murrell</masterLabel>
+        <translation><!-- Daishon Murrell --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Elton Andrade</masterLabel>
+        <translation><!-- Elton Andrade --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jeff Oriente</masterLabel>
+        <translation><!-- Jeff Oriente --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jeremy Zachariah</masterLabel>
+        <translation><!-- Jeremy Zachariah --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lingeshwaran Mahendiran</masterLabel>
+        <translation><!-- Lingeshwaran Mahendiran --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Loganathan Chakkaravarthy</masterLabel>
+        <translation><!-- Loganathan Chakkaravarthy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mason Hinrichs</masterLabel>
+        <translation><!-- Mason Hinrichs --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Meghana Pashikanti</masterLabel>
+        <translation><!-- Meghana Pashikanti --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ravi Kumar</masterLabel>
+        <translation><!-- Ravi Kumar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shilpa Balasubramanya</masterLabel>
+        <translation><!-- Shilpa Balasubramanya --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Swagat Senapati</masterLabel>
+        <translation><!-- Swagat Senapati --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Syed Saad</masterLabel>
+        <translation><!-- Syed Saad --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tarun Dalwani</masterLabel>
+        <translation><!-- Tarun Dalwani --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tejal Sawant</masterLabel>
+        <translation><!-- Tejal Sawant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tejo sai kumar Eepu</masterLabel>
+        <translation><!-- Tejo sai kumar Eepu --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tiffany Cook</masterLabel>
+        <translation><!-- Tiffany Cook --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Viji Lakshmana</masterLabel>
+        <translation><!-- Viji Lakshmana --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

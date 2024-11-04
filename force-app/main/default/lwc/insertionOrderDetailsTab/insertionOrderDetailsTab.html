@@ -1,0 +1,42 @@
+<template>
+  <template if:true={insertionOrderID}>
+    <lightning-record-form
+      record-id={insertionOrderID}
+      object-api-name="Insertion_Order__c"
+      layout-type="Full"
+      columns="3"
+      mode="readonly"
+    >
+    </lightning-record-form>
+  </template>
+  <template if:false={insertionOrderID}>
+    <div class="slds-var-p-around_medium lgc-bg">
+      <div class="slds-text-heading_large slds-text-align_center">
+        No Insertion Order to display!
+      </div>
+    </div>
+  </template>
+
+  <template if:true={lineItems}>
+    <h3 class="slds-section-title--divider slds-var-m-top_medium">
+      Line Items
+    </h3>
+    <lightning-accordion class="product-items" allow-multiple-sections-open>
+      <template for:each={lineItems} for:item="lineItem">
+        <div key={lineItem.Id}>
+          <lightning-accordion-section label={lineItem.Name}>
+            <lightning-record-form
+              record-id={lineItem.Id}
+              object-api-name="Line_Item__c"
+              layout-type="Full"
+              density="comfy"
+              columns="6"
+              mode="readonly"
+            >
+            </lightning-record-form>
+          </lightning-accordion-section>
+        </div>
+      </template>
+    </lightning-accordion>
+  </template>
+</template>

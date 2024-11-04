@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Select any other Agency this Opp is related to. Note that the invoices will be generated for the Primary Agency only. --></help>
+    <label><!-- Agency of Record --></label>
+    <name>Secondary_Agency__c</name>
+    <relationshipLabel><!-- Opportunities (Secondary Agency) --></relationshipLabel>
+</CustomFieldTranslation>

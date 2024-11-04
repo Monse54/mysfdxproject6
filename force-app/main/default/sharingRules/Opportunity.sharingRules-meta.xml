@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Media_Mint_Sharing</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Media Mint Sharing</label>
+        <sharedTo>
+            <role>Media_Mint_User</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>1-Managed Service</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Restrict_Partner_Opportunities_for_Sales_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Restrict Partner Opportunities for Sales Users.</label>
+        <sharedTo>
+            <group>Reseller_Record_Visibility</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Partner_Type__c</field>
+            <operation>equals</operation>
+            <value>Reseller</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Rule_for_non_reseller_opps</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Rule for non-reseller opps</label>
+        <sharedTo>
+            <group>Non_Reseller_Record_Visibility</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Partner_Type__c</field>
+            <operation>notEqual</operation>
+            <value>Reseller</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

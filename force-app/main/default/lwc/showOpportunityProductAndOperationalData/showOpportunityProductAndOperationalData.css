@@ -1,0 +1,9 @@
+.slds-scrollable {
+  overflow: auto; /* Ensure scrollbars are shown when necessary */
+  box-sizing: border-box;
+}
+
+.table-container {
+  height: 65vh;
+  width: 70vw;
+}

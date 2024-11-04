@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>None_or_Not_Available_selected</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+OR(
+ISBLANK(TEXT(IO_Number_Available__c)),
+ISPICKVAL(IO_Number_Available__c, &apos;Not Available&apos;)
+),
+NOT(ISBLANK(IO_Number__c)),
+NOT(Skip_Validations__c)
+)</errorConditionFormula>
+    <errorMessage>If &apos;None&apos; or &apos;Not Available&apos; is selected, the IO Number field must be empty.</errorMessage>
+</ValidationRule>

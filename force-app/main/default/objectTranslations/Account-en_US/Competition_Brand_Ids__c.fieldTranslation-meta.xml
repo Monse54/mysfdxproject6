@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Separate multiple values by comma. --></help>
+    <label><!-- Competition Brand Ids --></label>
+    <name>Competition_Brand_Ids__c</name>
+</CustomFieldTranslation>

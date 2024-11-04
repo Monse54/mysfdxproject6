@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Revenue__c</fullName>
+    <externalId>false</externalId>
+    <formula>General_Market_East__c + General_Market_West__c + International__c + LG_Sales_PMP__c + National_Media_Entertainment__c + Partner_PMP__c + Platform_PMP__c + Programmatic_Others__c + Reseller__c + Social__c + Corporate__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Total Revenue</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

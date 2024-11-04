@@ -1,0 +1,36 @@
+.verticalAlign {
+  cursor: pointer;
+  margin: 4px 0px 0px 6px !important;
+}
+.fullWidth {
+  width: 100% !important;
+}
+.eachItem:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+.pillContainer {
+  border: 1px solid #d9dbdd;
+  border-radius: 4px;
+  line-height: 0.5rem;
+  padding: 2px;
+}
+.info {
+  color: rgba(3, 20, 250, 0.904);
+}
+
+/* For Scrolling */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  display: none !important;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.4);
+}
+.slds-modal__content {
+  overflow: initial;
+}

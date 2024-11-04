@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IO_Number_required_if_available</fullName>
+    <active>false</active>
+    <errorConditionFormula>NOT( ISPICKVAL(IO_Number_Available__c, &apos;Not Available&apos;)) &amp;&amp; ISBLANK(IO_Number__c)</errorConditionFormula>
+    <errorDisplayField>IO_Number__c</errorDisplayField>
+    <errorMessage>Please enter the IO Number or pick Not Available in IO Number Available list</errorMessage>
+</ValidationRule>

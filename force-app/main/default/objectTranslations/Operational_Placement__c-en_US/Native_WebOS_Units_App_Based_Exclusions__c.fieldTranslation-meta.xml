@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Native WebOS/Units/App Based Exclusions --></label>
+    <name>Native_WebOS_Units_App_Based_Exclusions__c</name>
+    <picklistValues>
+        <masterLabel>App Install Base Exclusion</masterLabel>
+        <translation><!-- App Install Base Exclusion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other.</masterLabel>
+        <translation><!-- Other. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WebOS 22 Exclusion</masterLabel>
+        <translation><!-- WebOS 22 Exclusion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WebOS 23 Exclusion</masterLabel>
+        <translation><!-- WebOS 23 Exclusion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WebOS 3.0 Exclusion</masterLabel>
+        <translation><!-- WebOS 3.0 Exclusion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WebOS 3.5 Exclusion</masterLabel>
+        <translation><!-- WebOS 3.5 Exclusion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WebOS 4.0 Exclusion</masterLabel>
+        <translation><!-- WebOS 4.0 Exclusion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WebOS 4.5 Exclusion</masterLabel>
+        <translation><!-- WebOS 4.5 Exclusion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WebOS 5.0 Exclusion</masterLabel>
+        <translation><!-- WebOS 5.0 Exclusion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WebOS 6.0 Exclusion</masterLabel>
+        <translation><!-- WebOS 6.0 Exclusion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wedge Exclusion</masterLabel>
+        <translation><!-- Wedge Exclusion --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

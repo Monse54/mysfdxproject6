@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_KPI__c</fullName>
+    <label>Primary KPI</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>App Engagement</fullName>
+                <default>false</default>
+                <label>App Engagement</label>
+            </value>
+            <value>
+                <fullName>App Engagement - App Launches</fullName>
+                <default>false</default>
+                <label>App Engagement - App Launches</label>
+            </value>
+            <value>
+                <fullName>Awareness/Unique Reach</fullName>
+                <default>false</default>
+                <label>Awareness/Unique Reach</label>
+            </value>
+            <value>
+                <fullName>CTR</fullName>
+                <default>false</default>
+                <label>CTR</label>
+            </value>
+            <value>
+                <fullName>Delivery In Full</fullName>
+                <default>false</default>
+                <label>Delivery In Full</label>
+            </value>
+            <value>
+                <fullName>Delivery in Full - Evenly Pacing</fullName>
+                <default>false</default>
+                <label>Delivery in Full - Evenly Pacing</label>
+            </value>
+            <value>
+                <fullName>Fraud</fullName>
+                <default>false</default>
+                <label>Fraud</label>
+            </value>
+            <value>
+                <fullName>Frequency</fullName>
+                <default>false</default>
+                <label>Frequency</label>
+            </value>
+            <value>
+                <fullName>In Geo</fullName>
+                <default>false</default>
+                <label>In Geo</label>
+            </value>
+            <value>
+                <fullName>Tune in (show/movie)</fullName>
+                <default>false</default>
+                <label>Tune in (show/movie)</label>
+            </value>
+            <value>
+                <fullName>VCR</fullName>
+                <default>false</default>
+                <label>VCR</label>
+            </value>
+            <value>
+                <fullName>Viewability</fullName>
+                <default>false</default>
+                <label>Viewability</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

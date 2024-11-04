@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_CommunityUser_cannot_close_Oppty</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Profile.Name = &apos;Partner Resellers Profile&apos;
+&amp;&amp;
+IsClosed</errorConditionFormula>
+    <errorMessage>You cannot close this Opportunity.</errorMessage>
+</ValidationRule>

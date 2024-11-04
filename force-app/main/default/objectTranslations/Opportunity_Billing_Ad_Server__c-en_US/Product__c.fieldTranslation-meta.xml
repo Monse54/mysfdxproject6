@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Product --></label>
+    <name>Product__c</name>
+    <picklistValues>
+        <masterLabel>Cross Device Display</masterLabel>
+        <translation><!-- Cross Device Display --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cross Device Video</masterLabel>
+        <translation><!-- Cross Device Video --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Default</masterLabel>
+        <translation><!-- Default --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LG CTV Content Network and O&amp;O</masterLabel>
+        <translation><!-- LG CTV Content Network and O&amp;O --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LG CTV Native</masterLabel>
+        <translation><!-- LG CTV Native --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

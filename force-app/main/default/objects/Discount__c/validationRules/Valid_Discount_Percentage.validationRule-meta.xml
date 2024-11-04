@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valid_Discount_Percentage</fullName>
+    <active>true</active>
+    <errorConditionFormula>Discount_Percentage__c &lt; 0 || Discount_Percentage__c &gt; 100</errorConditionFormula>
+    <errorDisplayField>Discount_Percentage__c</errorDisplayField>
+    <errorMessage>Discount percentage must be between 0 and 100.</errorMessage>
+</ValidationRule>

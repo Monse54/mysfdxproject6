@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AM_name_mandatory_on_Closed_Won</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISPICKVAL(StageName, &apos;Waiting on Assets - Closed Won&apos;) || ISPICKVAL(StageName, &apos;Closed Won&apos;),
+    ISBLANK(CSM__c),
+    NOT(Skip_Validations__c)
+)</errorConditionFormula>
+    <errorDisplayField>CSM__c</errorDisplayField>
+    <errorMessage>Please enter the AM before marking the opp Won</errorMessage>
+</ValidationRule>

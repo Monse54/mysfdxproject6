@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Adam_Davis_Ellen</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>Flight_Start_Date__c</columns>
+    <columns>Flight_End_Date__c</columns>
+    <columns>Full_Oppty_Id__c</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Agency__c</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Original_Booking_Amount__c</columns>
+    <columns>Weighted_Campaign_Amount__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>RFP received,Proposal submitted,Negotiation,Verbal Confirm,Waiting on Assets - Closed Won,Closed Won</value>
+    </filters>
+    <filters>
+        <field>Agency__c</field>
+        <operation>equals</operation>
+        <value>Davis Elen Advertising Inc</value>
+    </filters>
+    <label>Adam - Davis Elen</label>
+    <sharedTo>
+        <group>Non_Media_Mint_User</group>
+    </sharedTo>
+</ListView>

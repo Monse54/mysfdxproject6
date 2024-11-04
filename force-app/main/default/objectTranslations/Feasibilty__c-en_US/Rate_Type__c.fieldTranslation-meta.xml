@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Rate Type --></label>
+    <name>Rate_Type__c</name>
+    <picklistValues>
+        <masterLabel>CPM</masterLabel>
+        <translation><!-- CPM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CPVC</masterLabel>
+        <translation><!-- CPVC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Sure</masterLabel>
+        <translation><!-- Not Sure --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

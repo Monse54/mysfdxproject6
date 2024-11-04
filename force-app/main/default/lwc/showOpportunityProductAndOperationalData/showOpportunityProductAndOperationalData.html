@@ -1,0 +1,422 @@
+<template>
+  <button
+    type="button"
+    title="Export"
+    slot="actions"
+    class="slds-button slds-button_brand temclass"
+    onclick={handleRedirect}
+  >
+    Export
+  </button>
+
+  <button
+    type="button"
+    title="Add Line Item"
+    slot="actions"
+    class="slds-button slds-button_brand temclass"
+    disabled={isSaveDisabled}
+    onclick={showPopup}
+  >
+    Add IO Product
+  </button>
+
+  <!-- <button
+    type="button"
+    title="Sort"
+    slot="actions"    
+    class="slds-button slds-button_brand temclass"
+    onclick={sortByName}
+  >
+    Sort
+  </button> -->
+  <p style="font-size: 15px">Count:({noOfProduct})</p>
+  <div class="slds-scrollable" style="height: 40rem">
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+      <template for:each={productdata} for:item="item" for:index="index">
+        <tr key={item} class="slds-hint-parent">
+          <!--<td>
+					<lightning-button-icon id={item.Id} data-rowid={item.Id} icon-name="utility:chevronright"
+						onclick={showOrHideChildrenRows} data-expanded="false" alternative-text="expand">
+					</lightning-button-icon>
+					<lightning-button-icon id={item.Id} data-name={item.Id} data-rowid={item.Id} icon-name="utility:new"
+						variant="brand" alternative-text="Add FlightItem" title="Add FlightItem" onclick={showPopup2}
+						data-expanded="true">
+					</lightning-button-icon>
+				</td>-->
+          <td>
+            <lightning-button-icon
+              id={item.Id}
+              data-id={item.Id}
+              icon-name="utility:delete"
+              variant="bare"
+              alternative-text="Delete"
+              title="Delete"
+              onclick={confirmProductItemDelete}
+              disabled={isDeleteDisabled}
+            >
+            </lightning-button-icon>
+            <lightning-button-icon
+              id={item.Id}
+              data-id={item.Id}
+              icon-name="utility:copy"
+              variant="bare"
+              alternative-text="Copy"
+              title="Copy"
+              onclick={handleClone}
+              disabled={isSaveDisabled}
+            >
+            </lightning-button-icon>
+            <lightning-button-icon
+              id={item.Id}
+              data-id={item.Id}
+              icon-name="utility:edit"
+              variant="bare"
+              alternative-text="Edit"
+              title="Edit"
+              onclick={navigateToRecord}
+            >
+            </lightning-button-icon>
+            <!--<lightning-button-icon id={item.Id} data-id={item.Id} icon-name="utility:edit" variant="bare"
+						alternative-text="Edit" title="Edit" onclick={editPopup}>
+					</lightning-button-icon>  -->
+            <!-- <lightning-button  data-id={item.Id} icon-name="utility:copy" variant="bare" onclick={handleClone}></lightning-button> -->
+          </td>
+
+          <td>
+            <div>
+              <lightning-input
+                name="Product Family"
+                data-id={item.Id}
+                type="text"
+                label="Product Family &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+                value={item.productFamily}
+                disabled
+              >
+              </lightning-input>
+            </div>
+          </td>
+          <template if:true={item.isProductFamily}>
+            <td>
+              <div>
+                <!--<lightning-input name="Placement_Billing_Name__c" data-id={item.Id} type="text"
+								label="Placement Billing Name&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" value={item.placementBillingName}
+								onchange={handleInputChange}></lightning-input> -->
+
+                <lightning-input
+                  name="IO Product ID"
+                  data-id={item.Id}
+                  type="text"
+                  label="IO Product ID &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+                  value={item.Id}
+                  disabled
+                  style="width: 100px"
+                >
+                </lightning-input>
+              </div>
+            </td>
+            <td>
+              <div>
+                <lightning-input
+                  name="IO Product Display Name"
+                  data-id={item.Id}
+                  type="text"
+                  label="IO Product Display Name &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+                  value={item.IO_Product_Display_Name}
+                  disabled
+                  style="width: 150px"
+                >
+                </lightning-input>
+              </div>
+            </td>
+            <td>
+              <div>
+                <lightning-input
+                  name="Product_Full_Name__c"
+                  data-id={item.Id}
+                  type="text"
+                  label="IO Product Billing Name&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+                  value={item.placementBillingName}
+                  onchange={handleInputChange}
+                  disabled
+                ></lightning-input>
+              </div>
+            </td>
+            <td>
+              <div>
+                <!--	<lightning-combobox data-id={item.Id} onchange={handleInputChange} name="Product_Type"
+								label="Product Type&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" value={item.product} options={product} disabled></lightning-combobox> -->
+
+                <lightning-input
+                  label="Product &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+                  name="Product__c"
+                  data-id={item.Id}
+                  type="text"
+                  value={item.product}
+                  onchange={handleInputChange}
+                  disabled
+                  style="width: 150px"
+                ></lightning-input>
+              </div>
+            </td>
+            <td>
+              <div>
+                <lightning-input
+                  label="Placement Type"
+                  name="Product__c"
+                  data-id={item.Id}
+                  type="text"
+                  value={item.placementType}
+                  onchange={handleInputChange}
+                  disabled
+                  style="width: 130px"
+                ></lightning-input>
+              </div>
+            </td>
+            <td>
+              <div>
+                <lightning-input
+                  label="Placement Category &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+                  name="Placement Category"
+                  data-id={item.Id}
+                  type="text"
+                  value={item.placementCategory}
+                  disabled
+                  style="width: 120px"
+                ></lightning-input>
+              </div>
+            </td>
+            <td>
+              <div>
+                <lightning-input
+                  name="Start_Date__c"
+                  data-id={item.Id}
+                  label="Start Date"
+                  style="width: 300px"
+                  value={item.startDate}
+                  onchange={handleInputChange}
+                  type="datetime"
+                  message-when-range-overflow="Please select a future date."
+                  disabled
+                ></lightning-input>
+              </div>
+            </td>
+            <td>
+              <div>
+                <lightning-input
+                  name="End_Date__c"
+                  data-id={item.Id}
+                  type="datetime"
+                  label="End Date"
+                  style="width: 300px"
+                  value={item.endDate}
+                  onchange={handleInputChange}
+                  disabled
+                ></lightning-input>
+              </div>
+            </td>
+            <td>
+              <div class="custom-input-container">
+                <lightning-input
+                  name="Rate__c"
+                  data-id={item.Id}
+                  type="Number"
+                  value={item.rate}
+                  label="Rate value"
+                  onchange={handleInputChange}
+                  step="0.01"
+                  min="0"
+                  disabled
+                ></lightning-input>
+              </div>
+            </td>
+            <td>
+              <div>
+                <lightning-input
+                  name="Total Price"
+                  label="Total Booking Amount"
+                  data-id={item.Id}
+                  type="Number"
+                  value={item.totalPrice}
+                  step="0.01"
+                  min="0"
+                  disabled
+                >
+                </lightning-input>
+              </div>
+            </td>
+            <td>
+              <div>
+                <lightning-input
+                  name="IO_Impression_Goal__c"
+                  data-id={item.Id}
+                  type="Number"
+                  value={item.ioImpressionGoal}
+                  label="IO Impression Goal"
+                  onchange={handleInputChange}
+                  disabled
+                >
+                </lightning-input>
+              </div>
+            </td>
+          </template>
+        </tr>
+
+        <template if:true={item.isVisible}>
+          <tr
+            key={item.Id}
+            style="background: rgb(243, 243, 243)"
+            class={item.rowStyle}
+          >
+            <th itemid={item.Id} data-id={item.Id}></th>
+            <th></th>
+            <!--	<th>Operational Placement ID</th>
+					<th>Placement Display Name</th>
+					<th>Original Booking Amount</th>
+					<th>Total Booking Amount</th>
+					<th>IO Impression Goal</th>
+					<th>Rate</th>
+					<th>Start Date</th>
+					<th>End Date</th>
+					<th>Audience Targeting</th>
+					<th>Audience Segment Details</th> -->
+          </tr>
+          <template
+            for:each={item.operationalPlacements}
+            for:item="orc"
+            for:index="index"
+          >
+            <tr key={item.Id} class={item.rowStyle}>
+              <td>
+                <lightning-button-icon
+                  id={orc.Id}
+                  data-id={orc.Id}
+                  icon-name="utility:delete"
+                  variant="bare"
+                  alternative-text="Delete"
+                  title="Delete"
+                  onclick={confirmOpreationItemDelete}
+                >
+                </lightning-button-icon>
+              </td>
+              <td>
+                <lightning-button-icon
+                  id={orc.Id}
+                  data-id={orc.Id}
+                  icon-name="utility:edit"
+                  variant="bare"
+                  alternative-text="Edit"
+                  title="Edit"
+                  onclick={navigateToRecord}
+                >
+                </lightning-button-icon>
+              </td>
+              <td>
+                <lightning-input
+                  name="OperationalPlacementID"
+                  data-id={orc.Id}
+                  type="text"
+                  value={orc.name}
+                  label="Operational Placement ID"
+                  onchange={handleInputChange}
+                  disabled
+                ></lightning-input>
+              </td>
+              <td>
+                <lightning-input
+                  name="Placement_Display_Name__c"
+                  data-id={orc.Id}
+                  type="text"
+                  label="Placement Display Name"
+                  value={orc.placementDisplayName}
+                  onchange={handleInputChange}
+                ></lightning-input>
+              </td>
+              <td>
+                <lightning-input
+                  name="Original_Booking_Amount__c"
+                  data-id={orc.Id}
+                  type="number"
+                  label="Original Booking Amount"
+                  value={orc.originalBookingAmount}
+                  onchange={handleInputChange}
+                ></lightning-input>
+              </td>
+              <td>
+                <lightning-input
+                  name="Total_Booking_Amount__c"
+                  data-id={orc.Id}
+                  type="number"
+                  label="Total Booking Amount"
+                  value={orc.totalBookingAmount}
+                  onchange={handleInputChange}
+                ></lightning-input>
+              </td>
+              <td>
+                <lightning-input
+                  name="IO_Impression_Goal__c"
+                  data-id={orc.Id}
+                  type="text"
+                  label="IO Impression Goal"
+                  value={orc.ioImpressionGoal}
+                  onchange={handleInputChange}
+                ></lightning-input>
+              </td>
+              <td>
+                <lightning-input
+                  name="Rate__c"
+                  data-id={orc.Id}
+                  type="number"
+                  value={orc.rate}
+                  label="Rate"
+                  onchange={handleInputChange}
+                ></lightning-input>
+              </td>
+              <td>
+                <lightning-input
+                  name="Start_Date__c"
+                  data-id={orc.Id}
+                  type="date"
+                  value={orc.startDate}
+                  label="Star Date &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+                  onchange={handleInputChange}
+                ></lightning-input>
+              </td>
+              <td>
+                <lightning-input
+                  name="End_Date__c"
+                  data-id={orc.Id}
+                  type="date"
+                  value={orc.endDate}
+                  label=" End Date &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+                  onchange={handleInputChange}
+                ></lightning-input>
+              </td>
+              <td>
+                <lightning-input
+                  name="Audience_Targeting__c"
+                  data-id={orc.Id}
+                  type="text"
+                  label="Audience Targeting"
+                  value={orc.audienceTargeting}
+                  onchange={handleInputChange}
+                ></lightning-input>
+              </td>
+              <td>
+                <lightning-input
+                  name="Audience_Segment_Details__c"
+                  data-id={orc.Id}
+                  type="text"
+                  label="Audience Segment Details"
+                  value={orc.audienceSegmentDetails}
+                  onchange={handleInputChange}
+                ></lightning-input>
+              </td>
+            </tr>
+          </template>
+        </template>
+      </template>
+    </table>
+  </div>
+  <br />
+  <!--<button type="button" title="Add Line Item" slot="actions" class="slds-button slds-button_brand temclass" onclick={add}>Add Line Item</button> -->
+</template>

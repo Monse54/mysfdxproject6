@@ -1,0 +1,127 @@
+<template>
+  <!-- lightning button for open modal window -->
+  <lightning-button
+    variant="brand"
+    label="Custom Schedule"
+    title="Custom Schedule"
+    onclick={openModal}
+    class="slds-align_absolute-center"
+  >
+  </lightning-button>
+
+  <!-- Spinner -->
+  <div if:true={showLoadingSpinner}>
+    <lightning-spinner
+      alternative-text="Loading"
+      size="large"
+    ></lightning-spinner>
+  </div>
+
+  <!--Use template if:true to display/hide popup based on isModalOpen value-->
+  <template if:true={isModalOpen}>
+    <!-- Modal/Popup Box LWC starts here -->
+    <section
+      role="dialog"
+      tabindex="-1"
+      aria-labelledby="modal-heading-01"
+      aria-modal="true"
+      aria-describedby="modal-content-id-1"
+      class="slds-modal slds-fade-in-open"
+    >
+      <div class="slds-modal__container">
+        <!-- Modal/Popup Box LWC header here -->
+        <header class="slds-modal__header">
+          <button
+            class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+            title="Close"
+            onclick={closeModal}
+          >
+            <lightning-icon
+              icon-name="utility:close"
+              alternative-text="close"
+              variant="inverse"
+              size="small"
+            ></lightning-icon>
+            <span class="slds-assistive-text">Close</span>
+          </button>
+          <h2
+            id="modal-heading-01"
+            class="slds-text-heading_medium slds-hyphenate"
+          >
+            Custom Schedule
+          </h2>
+        </header>
+        <!-- Modal/Popup Box LWC body starts here -->
+        <div
+          class="slds-modal__content slds-var-p-around_medium"
+          id="modal-content-id-1"
+        >
+          <lightning-input
+            type="date"
+            name="StartDate"
+            label="Start Date"
+            value={startDate}
+            onchange={handleChange}
+            required
+          >
+          </lightning-input>
+          <lightning-input
+            type="date"
+            name="EndDate"
+            label="End Date"
+            value={endDate}
+            onchange={handleChange}
+            required
+          >
+          </lightning-input>
+          <lightning-input
+            type="number"
+            formatter="currency"
+            name="Revenue"
+            label="Revenue"
+            value={revenue}
+            onchange={handleChange}
+            required
+          >
+          </lightning-input>
+          <lightning-combobox
+            name="InstallationPeriod"
+            label="Installation Period"
+            value={installationPeriod}
+            options={installationPeriodOptions}
+            onchange={handleChange}
+            required
+          >
+          </lightning-combobox>
+          <lightning-combobox
+            name="ScheduleType"
+            label="Schedule Type"
+            value={scheduleType}
+            options={scheduleTypeOptions}
+            onchange={handleChange}
+            required
+          >
+          </lightning-combobox>
+        </div>
+        <!-- Modal/Popup Box LWC footer starts here -->
+        <footer class="slds-modal__footer">
+          <button
+            class="slds-button slds-button_neutral"
+            onclick={closeModal}
+            title="Cancel"
+          >
+            Cancel
+          </button>
+          <button
+            class="slds-button slds-button_brand"
+            onclick={submitDetails}
+            title="Save"
+          >
+            Save
+          </button>
+        </footer>
+      </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+  </template>
+</template>

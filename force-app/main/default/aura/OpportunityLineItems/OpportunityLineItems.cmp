@@ -1,0 +1,39 @@
+<!--
+ - Created by cxu on 7/02/2017.
+ -->
+
+<aura:component description="OpportunityLineItems"
+                controller="FastOpportunityController">
+    <aura:attribute name="recordId" type="string"></aura:attribute>
+    <aura:attribute name="items" type="OpportunityLineItem[]"></aura:attribute>
+    <aura:attribute name="entries" type="PricebookEntry[]"></aura:attribute>
+    <aura:attribute name="editMode" type="boolean"></aura:attribute>
+    
+    <aura:handler event="c:RemoveLineItem" action="{!c.handleItemRemoval}"/>
+
+    <ol class="slds-list--vertical slds-list--vertical-space">
+        <aura:if isTrue="{!equals(v.items.length, 0)}">
+            <li class="slds-item slds-hint-parent">
+                <div class="slds-filters__item slds-grid slds-grid--vertical-align-center">
+                    <p>No product has been added yet.</p>
+                </div>
+            </li>
+        </aura:if>
+        <aura:iteration items="{!v.items}" var="item">
+            <c:OpportunityLineItem item="{!item}" entries="{!v.entries}" editMode="{!v.editMode}"></c:OpportunityLineItem>
+        </aura:iteration>
+    </ol>
+
+    <aura:if isTrue="{!v.editMode}">
+        <div class="slds-filters__footer slds-grid slds-shrink-none">
+            <a href="javascript:void(0);" onclick="{!c.addNewItem}">Add New</a>
+            <a href="javascript:void(0);" onclick="{!c.removeAllItems}" class="slds-col--bump-left">Remove All</a>
+        </div>
+        <center>
+            <lightning:button class="slds-col--bump-left" label="Save" onclick="{!c.saveLineItems}" variant="brand"></lightning:button>
+            <lightning:button class="slds-col--bump-left" variant="neutral" label="Cancel" onclick="{!c.disableEditMode}"></lightning:button>
+        </center>
+    </aura:if>
+    <lightning:spinner aura:id="mySpinner" class="slds-hide"/>
+
+</aura:component>

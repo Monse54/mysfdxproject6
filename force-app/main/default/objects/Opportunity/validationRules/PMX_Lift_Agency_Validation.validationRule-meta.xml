@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMX_Lift_Agency_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT(ISPICKVAL(PMX_Lift__c, &quot;&quot;)),
+NOT(
+OR(
+Agency__r.Name = &quot;Apex Exchange&quot;,
+Agency__r.Name = &quot;Publicis PMX&quot;
+)
+),
+NOT(Skip_Validations__c)
+)</errorConditionFormula>
+    <errorMessage>PMX Lift can only be filled when the Primary Agency is &apos;Apex Exchange&apos; or &apos;Publicis PMX&apos;.</errorMessage>
+</ValidationRule>

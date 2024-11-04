@@ -1,0 +1,11 @@
+/**
+ * Created by cxu on 8/02/2017.
+ */
+.THIS .slds-filters__header {
+    padding: .75rem;
+}
+
+.THIS {
+    background-color: rgb(244, 246, 249);
+    border: 1px solid rgb(216, 221, 230);
+}

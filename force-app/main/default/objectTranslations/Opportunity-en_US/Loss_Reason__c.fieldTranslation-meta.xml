@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Loss Reason --></label>
+    <name>Loss_Reason__c</name>
+    <picklistValues>
+        <masterLabel>Campaign Paused</masterLabel>
+        <translation><!-- Campaign Paused --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Change in client strategy</masterLabel>
+        <translation><!-- Change in client strategy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Client Budget Cuts</masterLabel>
+        <translation><!-- Client Budget Cuts --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Client went dark/No Feedback received</masterLabel>
+        <translation><!-- Client went dark/No Feedback received --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Competitor</masterLabel>
+        <translation><!-- Competitor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Duplicate Opportunity</masterLabel>
+        <translation><!-- Duplicate Opportunity --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Missing Capability</masterLabel>
+        <translation><!-- Missing Capability --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No RFP</masterLabel>
+        <translation><!-- No RFP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ProActive Proposal</masterLabel>
+        <translation><!-- ProActive Proposal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rates and/or Minimums</masterLabel>
+        <translation><!-- Rates and/or Minimums --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Select if IO Number is available from the client --></help>
+    <label><!-- IO Number Available --></label>
+    <name>IO_Number_Available__c</name>
+    <picklistValues>
+        <masterLabel>Available</masterLabel>
+        <translation><!-- Available --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Available</masterLabel>
+        <translation><!-- Not Available --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fourth_Billing_Contact_Email_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  NOT(ISBLANK(Fourth_Billing_Contact__c)),
+  ISBLANK(Fourth_Billing_Contact__r.Email),
+NOT(Skip_Validations__c)
+)</errorConditionFormula>
+    <errorDisplayField>Fourth_Billing_Contact__c</errorDisplayField>
+    <errorMessage>Billing Contact has no email address set</errorMessage>
+</ValidationRule>

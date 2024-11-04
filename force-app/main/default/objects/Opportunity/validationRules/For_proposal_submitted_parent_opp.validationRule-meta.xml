@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>For_proposal_submitted_parent_opp</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND($RecordType.DeveloperName = &quot;Parent_Opportunity&quot;,
+    ISPICKVAL(StageName, &quot;Proposal Submitted&quot;),
+  
+
+    OR(
+        ISBLANK( Amount ),
+        ISBLANK( Contract_Start__c ),
+        ISBLANK( Contract_End__c )
+    )
+)</errorConditionFormula>
+    <errorMessage>When the Opportunity stage is &apos;Proposal Submitted&apos;, the following fields are required: Total Booking Amount, Contract Start Date, and Contract End Date.</errorMessage>
+</ValidationRule>

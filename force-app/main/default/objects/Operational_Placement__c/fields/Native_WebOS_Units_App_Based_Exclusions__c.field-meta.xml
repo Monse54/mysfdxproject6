@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Native_WebOS_Units_App_Based_Exclusions__c</fullName>
+    <label>Native WebOS/Units/App Based Exclusions</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Wedge Exclusion</fullName>
+                <default>false</default>
+                <label>Wedge Exclusion</label>
+            </value>
+            <value>
+                <fullName>WebOS 3.0 Exclusion</fullName>
+                <default>false</default>
+                <label>WebOS 3.0 Exclusion</label>
+            </value>
+            <value>
+                <fullName>WebOS 3.5 Exclusion</fullName>
+                <default>false</default>
+                <label>WebOS 3.5 Exclusion</label>
+            </value>
+            <value>
+                <fullName>WebOS 4.0 Exclusion</fullName>
+                <default>false</default>
+                <label>WebOS 4.0 Exclusion</label>
+            </value>
+            <value>
+                <fullName>WebOS 4.5 Exclusion</fullName>
+                <default>false</default>
+                <label>WebOS 4.5 Exclusion</label>
+            </value>
+            <value>
+                <fullName>WebOS 5.0 Exclusion</fullName>
+                <default>false</default>
+                <label>WebOS 5.0 Exclusion</label>
+            </value>
+            <value>
+                <fullName>WebOS 6.0 Exclusion</fullName>
+                <default>false</default>
+                <label>WebOS 6.0 Exclusion</label>
+            </value>
+            <value>
+                <fullName>WebOS 22 Exclusion</fullName>
+                <default>false</default>
+                <label>WebOS 22 Exclusion</label>
+            </value>
+            <value>
+                <fullName>WebOS 23 Exclusion</fullName>
+                <default>false</default>
+                <label>WebOS 23 Exclusion</label>
+            </value>
+            <value>
+                <fullName>App Install Base Exclusion</fullName>
+                <default>false</default>
+                <label>App Install Base Exclusion</label>
+            </value>
+            <value>
+                <fullName>Other.</fullName>
+                <default>false</default>
+                <label>Other.</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

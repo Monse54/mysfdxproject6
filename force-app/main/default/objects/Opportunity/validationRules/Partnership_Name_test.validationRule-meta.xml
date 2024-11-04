@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partnership_Name_test</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(
+AND(
+OR(
+ISPICKVAL(Partner__c, &apos;Magnite&apos;),
+ISPICKVAL(Partner__c, &apos;DeepIntent&apos;)
+),
+ISBLANK( Partner_Seller_Name__c ),
+NOT(Skip_Validations__c)
+),
+true,
+false
+)</errorConditionFormula>
+    <errorDisplayField>Partner_Seller_Name__c</errorDisplayField>
+    <errorMessage>Please enter partner Seller Name since this Opportunity is in partnership with Magnite Or DeepIntent</errorMessage>
+</ValidationRule>

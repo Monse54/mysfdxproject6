@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Vertical__c</fullName>
+    <label>Business Vertical</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>National Media &amp; Entertainment</fullName>
+                <default>false</default>
+                <label>National Media &amp; Entertainment</label>
+            </value>
+            <value>
+                <fullName>General Market West</fullName>
+                <default>false</default>
+                <label>General Market West</label>
+            </value>
+            <value>
+                <fullName>General Market East</fullName>
+                <default>false</default>
+                <label>General Market East</label>
+            </value>
+            <value>
+                <fullName>International</fullName>
+                <default>false</default>
+                <label>International</label>
+            </value>
+            <value>
+                <fullName>Corporate</fullName>
+                <default>false</default>
+                <label>Corporate</label>
+            </value>
+            <value>
+                <fullName>Reseller</fullName>
+                <default>false</default>
+                <label>Reseller</label>
+            </value>
+            <value>
+                <fullName>Political</fullName>
+                <default>false</default>
+                <label>Political</label>
+            </value>
+            <value>
+                <fullName>Partner PMP</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Partner PMP</label>
+            </value>
+            <value>
+                <fullName>Platform PMP</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Platform PMP</label>
+            </value>
+            <value>
+                <fullName>Programmatic - Others</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Programmatic - Others</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

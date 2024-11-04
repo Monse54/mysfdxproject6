@@ -1,0 +1,3 @@
+<aura:event type="APPLICATION" description="For removing a particular line item for opportunity">
+    <aura:attribute name="item" type="OpportunityLineItem"></aura:attribute>
+</aura:event>

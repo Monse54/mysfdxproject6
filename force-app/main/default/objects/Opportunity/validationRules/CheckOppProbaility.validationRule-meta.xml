@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CheckOppProbaility</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISNEW(),
+Probability &gt; 0.25,
+NOT(Skip_Validations__c)
+)</errorConditionFormula>
+    <errorMessage>Probability must be 25% or lower when creating and opportunity</errorMessage>
+</ValidationRule>

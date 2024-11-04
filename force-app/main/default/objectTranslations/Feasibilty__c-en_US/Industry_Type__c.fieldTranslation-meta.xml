@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- What industry does the opp target? Mandatory for Managed Services. --></help>
+    <label><!-- Industry Type --></label>
+    <name>Industry_Type__c</name>
+    <picklistValues>
+        <masterLabel>Entertainment</masterLabel>
+        <translation><!-- Entertainment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>General Market</masterLabel>
+        <translation><!-- General Market --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

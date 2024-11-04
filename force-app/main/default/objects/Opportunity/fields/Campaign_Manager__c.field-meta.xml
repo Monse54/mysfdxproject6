@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Campaign_Manager__c</fullName>
+    <label>Campaign Manager</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Anjali Singh</fullName>
+                <default>false</default>
+                <label>Anjali Singh</label>
+            </value>
+            <value>
+                <fullName>Balaji Ramana</fullName>
+                <default>false</default>
+                <label>Balaji Ramana</label>
+            </value>
+            <value>
+                <fullName>Chaitanya Dupuguntla</fullName>
+                <default>false</default>
+                <label>Chaitanya Dupuguntla</label>
+            </value>
+            <value>
+                <fullName>Daishon Murrell</fullName>
+                <default>false</default>
+                <label>Daishon Murrell</label>
+            </value>
+            <value>
+                <fullName>Elton Andrade</fullName>
+                <default>false</default>
+                <label>Elton Andrade</label>
+            </value>
+            <value>
+                <fullName>Jeff Oriente</fullName>
+                <default>false</default>
+                <label>Jeff Oriente</label>
+            </value>
+            <value>
+                <fullName>Jeremy Zachariah</fullName>
+                <default>false</default>
+                <label>Jeremy Zachariah</label>
+            </value>
+            <value>
+                <fullName>Lingeshwaran Mahendiran</fullName>
+                <default>false</default>
+                <label>Lingeshwaran Mahendiran</label>
+            </value>
+            <value>
+                <fullName>Loganathan Chakkaravarthy</fullName>
+                <default>false</default>
+                <label>Loganathan Chakkaravarthy</label>
+            </value>
+            <value>
+                <fullName>Mason Hinrichs</fullName>
+                <default>false</default>
+                <label>Mason Hinrichs</label>
+            </value>
+            <value>
+                <fullName>Meghana Pashikanti</fullName>
+                <default>false</default>
+                <label>Meghana Pashikanti</label>
+            </value>
+            <value>
+                <fullName>Ravi Kumar</fullName>
+                <default>false</default>
+                <label>Ravi Kumar</label>
+            </value>
+            <value>
+                <fullName>Shilpa Balasubramanya</fullName>
+                <default>false</default>
+                <label>Shilpa Balasubramanya</label>
+            </value>
+            <value>
+                <fullName>Swagat Senapati</fullName>
+                <default>false</default>
+                <label>Swagat Senapati</label>
+            </value>
+            <value>
+                <fullName>Syed Saad</fullName>
+                <default>false</default>
+                <label>Syed Saad</label>
+            </value>
+            <value>
+                <fullName>Tarun Dalwani</fullName>
+                <default>false</default>
+                <label>Tarun Dalwani</label>
+            </value>
+            <value>
+                <fullName>Tejal Sawant</fullName>
+                <default>false</default>
+                <label>Tejal Sawant</label>
+            </value>
+            <value>
+                <fullName>Tejo sai kumar Eepu</fullName>
+                <default>false</default>
+                <label>Tejo sai kumar Eepu</label>
+            </value>
+            <value>
+                <fullName>Tiffany Cook</fullName>
+                <default>false</default>
+                <label>Tiffany Cook</label>
+            </value>
+            <value>
+                <fullName>Viji Lakshmana</fullName>
+                <default>false</default>
+                <label>Viji Lakshmana</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

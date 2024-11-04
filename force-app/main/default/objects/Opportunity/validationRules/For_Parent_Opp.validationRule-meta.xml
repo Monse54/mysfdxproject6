@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>For_Parent_Opp</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    $RecordType.DeveloperName = &apos;Parent_Opportunity&apos;,
+    ISBLANK(Account_Name__c),
+    ISBLANK(Agency__c),
+    ISBLANK(Holding_Company__c)
+
+  
+)</errorConditionFormula>
+    <errorMessage>Enter at least one of the following fields: Account Name, Primary Agency, or Holding Company for Parent Opportunity record type.</errorMessage>
+</ValidationRule>

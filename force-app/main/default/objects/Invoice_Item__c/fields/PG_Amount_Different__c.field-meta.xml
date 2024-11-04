@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PG_Amount_Different__c</fullName>
+    <formula>IF(
+    AND(
+        Amount__c &gt; 0,
+        Amount__c != PG_Billing_Landing__r.Amount__c
+    ),
+    TRUE,
+    FALSE
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>PG Amount Different</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

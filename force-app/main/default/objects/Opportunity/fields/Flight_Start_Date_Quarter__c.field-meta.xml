@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Flight_Start_Date_Quarter__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(!ISBLANK(Flight_Start_Date__c), (&apos;Q&apos; + TEXT(CEILING(MONTH(Flight_Start_Date__c) / 3 )) + &apos; &apos; + TEXT(YEAR(Flight_Start_Date__c))), &apos;&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Flight Start Date Quarter</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

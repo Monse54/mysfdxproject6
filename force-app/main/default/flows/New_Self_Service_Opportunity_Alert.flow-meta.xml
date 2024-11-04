@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Send_Self_Service_Oppty_Email</name>
+        <label>Send Self Service Oppty Email</label>
+        <locationX>807</locationX>
+        <locationY>270</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>SelfServiceEmailBody</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <stringValue>katie@lgads.tv</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>A new Self-Service Opportunity &quot;{!$Record.Name}&quot;!</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>52.0</apiVersion>
+    <constants>
+        <name>SelfServiceRecordType</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Self_Service</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <name>Check_if_Opportunity_is_Self_Service</name>
+        <label>Check if Opportunity is Self Service</label>
+        <locationX>538</locationX>
+        <locationY>271</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Self_Service_True</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>SelfServiceRecordType</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Is_Test_Opportunity__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Self_Service_Oppty_Email</targetReference>
+            </connector>
+            <label>Self Service True</label>
+        </rules>
+    </decisions>
+    <formulas>
+        <name>DOMAIN_URL</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!$Api.Enterprise_Server_URL_100}, FIND( &apos;/services&apos;, {!$Api.Enterprise_Server_URL_100}))</expression>
+    </formulas>
+    <formulas>
+        <name>FullName</name>
+        <dataType>String</dataType>
+        <expression>{!$User.FirstName} + &apos; &apos; + {!$User.LastName}</expression>
+    </formulas>
+    <interviewLabel>New Self Service Opportunity Alert {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>New Self Service Opportunity Alert</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>80</locationX>
+        <locationY>68</locationY>
+        <connector>
+            <targetReference>Check_if_Opportunity_is_Self_Service</targetReference>
+        </connector>
+        <object>Opportunity</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>SelfServiceEmailBody</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;Hi,&lt;/p&gt;&lt;p&gt;A new self-service opportunity is created.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Opportunity Details:&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Opportunity:&lt;/b&gt; &lt;a href=&quot;{!DOMAIN_URL}{!$Record.Id}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;{!$Record.Name}&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Id:&lt;/b&gt; {!$Record.Id}&lt;/p&gt;&lt;p&gt;&lt;b&gt;Created By:&lt;/b&gt; &lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;{!FullName}&lt;/span&gt;&lt;/p&gt;</text>
+    </textTemplates>
+</Flow>

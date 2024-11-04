@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Pmp Type --></label>
+    <name>Pmp_Type__c</name>
+    <picklistValues>
+        <masterLabel>LG Sales PMP</masterLabel>
+        <translation><!-- LG Sales PMP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LG Sales PMP - Non CTV Video</masterLabel>
+        <translation><!-- LG Sales PMP - Non CTV Video --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partner PMP</masterLabel>
+        <translation><!-- Partner PMP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Platform PMP</masterLabel>
+        <translation><!-- Platform PMP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Programmatic - Others</masterLabel>
+        <translation><!-- Programmatic - Others --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

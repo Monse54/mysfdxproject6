@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Industry_Type__c</fullName>
+    <label>Industry Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Auto</fullName>
+                <default>false</default>
+                <label>Auto</label>
+            </value>
+            <value>
+                <fullName>CPG</fullName>
+                <default>false</default>
+                <label>CPG</label>
+            </value>
+            <value>
+                <fullName>Education</fullName>
+                <default>false</default>
+                <label>Education</label>
+            </value>
+            <value>
+                <fullName>Financial Services</fullName>
+                <default>false</default>
+                <label>Financial Services</label>
+            </value>
+            <value>
+                <fullName>Gambling</fullName>
+                <default>false</default>
+                <label>Gambling</label>
+            </value>
+            <value>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+                <label>Insurance</label>
+            </value>
+            <value>
+                <fullName>Media &amp; Entertainment</fullName>
+                <default>false</default>
+                <label>Media &amp; Entertainment</label>
+            </value>
+            <value>
+                <fullName>Pharma &amp; Healthcare</fullName>
+                <default>false</default>
+                <label>Pharma &amp; Healthcare</label>
+            </value>
+            <value>
+                <fullName>Political</fullName>
+                <default>false</default>
+                <label>Political</label>
+            </value>
+            <value>
+                <fullName>QSR</fullName>
+                <default>false</default>
+                <label>QSR</label>
+            </value>
+            <value>
+                <fullName>Retail</fullName>
+                <default>false</default>
+                <label>Retail</label>
+            </value>
+            <value>
+                <fullName>Tech/Telco</fullName>
+                <default>false</default>
+                <label>Tech/Telco</label>
+            </value>
+            <value>
+                <fullName>Travel</fullName>
+                <default>false</default>
+                <label>Travel</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+            <value>
+                <fullName>Accounting Services</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Accounting Services</label>
+            </value>
+            <value>
+                <fullName>Advertising Agencies</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Advertising Agencies</label>
+            </value>
+            <value>
+                <fullName>Aerospace &amp; Defense</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Aerospace &amp; Defense</label>
+            </value>
+            <value>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Agriculture</label>
+            </value>
+            <value>
+                <fullName>Apparel</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Apparel</label>
+            </value>
+            <value>
+                <fullName>Architecture &amp; Engineering</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Architecture &amp; Engineering</label>
+            </value>
+            <value>
+                <fullName>Banking</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Banking</label>
+            </value>
+            <value>
+                <fullName>Beverages</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Beverages</label>
+            </value>
+            <value>
+                <fullName>Biotechnology</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Biotechnology</label>
+            </value>
+            <value>
+                <fullName>Broadcast Media</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Broadcast Media</label>
+            </value>
+            <value>
+                <fullName>Business Services</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Business Services</label>
+            </value>
+            <value>
+                <fullName>Chemicals</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Chemicals</label>
+            </value>
+            <value>
+                <fullName>Communications</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Communications</label>
+            </value>
+            <value>
+                <fullName>Computer Software</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Computer Software</label>
+            </value>
+            <value>
+                <fullName>Construction</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Construction</label>
+            </value>
+            <value>
+                <fullName>Consulting</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Consulting</label>
+            </value>
+            <value>
+                <fullName>Consumer Products</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Consumer Products</label>
+            </value>
+            <value>
+                <fullName>Department Stores</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Department Stores</label>
+            </value>
+            <value>
+                <fullName>Electronics</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Electronics</label>
+            </value>
+            <value>
+                <fullName>Energy</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Energy</label>
+            </value>
+            <value>
+                <fullName>Energy / Utilities</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Energy / Utilities</label>
+            </value>
+            <value>
+                <fullName>Engineering</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Engineering</label>
+            </value>
+            <value>
+                <fullName>Entertainment</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Entertainment</label>
+            </value>
+            <value>
+                <fullName>Environmental</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Environmental</label>
+            </value>
+            <value>
+                <fullName>Federal</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Federal</label>
+            </value>
+            <value>
+                <fullName>Finance</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Finance</label>
+            </value>
+            <value>
+                <fullName>Food &amp; Beverage</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Food &amp; Beverage</label>
+            </value>
+            <value>
+                <fullName>Food Processing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Food Processing</label>
+            </value>
+            <value>
+                <fullName>Gaming Software/Systems</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Gaming Software/Systems</label>
+            </value>
+            <value>
+                <fullName>Government</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Government</label>
+            </value>
+            <value>
+                <fullName>Health Insurance</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Health Insurance</label>
+            </value>
+            <value>
+                <fullName>Healthcare</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Healthcare</label>
+            </value>
+            <value>
+                <fullName>Higher Education</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Higher Education</label>
+            </value>
+            <value>
+                <fullName>Holding Companies</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Holding Companies</label>
+            </value>
+            <value>
+                <fullName>Hospitality</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Hospitality</label>
+            </value>
+            <value>
+                <fullName>Hospitals / Health Care</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Hospitals / Health Care</label>
+            </value>
+            <value>
+                <fullName>IT Services</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>IT Services</label>
+            </value>
+            <value>
+                <fullName>Legal Services</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Legal Services</label>
+            </value>
+            <value>
+                <fullName>Leisure</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Leisure</label>
+            </value>
+            <value>
+                <fullName>Lodging</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lodging</label>
+            </value>
+            <value>
+                <fullName>Logistics / Transportation</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Logistics / Transportation</label>
+            </value>
+            <value>
+                <fullName>Luxury</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Luxury</label>
+            </value>
+            <value>
+                <fullName>Machinery</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Machinery</label>
+            </value>
+            <value>
+                <fullName>Manufacturing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Manufacturing</label>
+            </value>
+            <value>
+                <fullName>Manufacturing - Durables</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Manufacturing - Durables</label>
+            </value>
+            <value>
+                <fullName>Manufacturing - Non-Durables</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Manufacturing - Non-Durables</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>Medical Devices</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Medical Devices</label>
+            </value>
+            <value>
+                <fullName>Non-Profit</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Non-Profit</label>
+            </value>
+            <value>
+                <fullName>Not For Profit</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Not For Profit</label>
+            </value>
+            <value>
+                <fullName>Oil &amp; Gas</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Oil &amp; Gas</label>
+            </value>
+            <value>
+                <fullName>Professional Services</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Professional Services</label>
+            </value>
+            <value>
+                <fullName>Professional Sports</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Professional Sports</label>
+            </value>
+            <value>
+                <fullName>Real Estate / Property Management</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Real Estate / Property Management</label>
+            </value>
+            <value>
+                <fullName>Recreation</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Recreation</label>
+            </value>
+            <value>
+                <fullName>Restaurants</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Restaurants</label>
+            </value>
+            <value>
+                <fullName>School Districts</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>School Districts</label>
+            </value>
+            <value>
+                <fullName>Services</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Services</label>
+            </value>
+            <value>
+                <fullName>Shipping</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Shipping</label>
+            </value>
+            <value>
+                <fullName>Social Media</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Social Media</label>
+            </value>
+            <value>
+                <fullName>State</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>State</label>
+            </value>
+            <value>
+                <fullName>Supermarkets</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Supermarkets</label>
+            </value>
+            <value>
+                <fullName>Telecom / Communication Services</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Telecom / Communication Services</label>
+            </value>
+            <value>
+                <fullName>Telecommunications</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Telecommunications</label>
+            </value>
+            <value>
+                <fullName>Tire Manufacturing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Tire Manufacturing</label>
+            </value>
+            <value>
+                <fullName>Transportation</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Transportation</label>
+            </value>
+            <value>
+                <fullName>Utilities</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Utilities</label>
+            </value>
+            <value>
+                <fullName>Venture Capital &amp; Private Equity</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Venture Capital &amp; Private Equity</label>
+            </value>
+            <value>
+                <fullName>Wholesale</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Wholesale</label>
+            </value>
+            <value>
+                <fullName>Wine and Distilled Alcoholic Beverage</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Wine and Distilled Alcoholic Beverage</label>
+            </value>
+            <value>
+                <fullName>Wireless Telecommunications Carriers</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Wireless Telecommunications Carriers</label>
+            </value>
+            <value>
+                <fullName>eCommerce</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>eCommerce</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

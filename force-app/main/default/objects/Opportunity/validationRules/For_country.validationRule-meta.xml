@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>For_country</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    OR(
+        ISPICKVAL(StageName, &apos;Waiting on Assets - Closed Won&apos;),
+        ISPICKVAL(StageName, &apos;Closed Won&apos;)
+    ),
+    ISBLANK(Country__c),
+    NOT(Skip_Validations__c),
+    DATEVALUE(CreatedDate) &gt; DATEVALUE($Label.Opp_validation_effective_Date)
+)</errorConditionFormula>
+    <errorDisplayField>Country__c</errorDisplayField>
+    <errorMessage>Country is required in  &apos;Closed Won - Waiting for Assets&apos; or &apos;Closed Won&apos; stages.&quot;</errorMessage>
+</ValidationRule>

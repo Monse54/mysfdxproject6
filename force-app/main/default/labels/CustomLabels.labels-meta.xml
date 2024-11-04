@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Audience_sgmt_deployment_date</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Audience sgmt deployment date</shortDescription>
+        <value>2024-09-20</value>
+    </labels>
+    <labels>
+        <fullName>IO_Placement_Deployment_Date</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IO Placement Deployment Date</shortDescription>
+        <value>2024-08-17</value>
+    </labels>
+    <labels>
+        <fullName>Insights_Pricebook_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Insights Pricebook Id</shortDescription>
+        <value>01s5Y000006KBxmQAG</value>
+    </labels>
+    <labels>
+        <fullName>Managed_Service_Price_Book_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Managed Service Price Book Id</shortDescription>
+        <value>01s5Y000006KBxcQAG</value>
+    </labels>
+    <labels>
+        <fullName>Opp_KPI_Validation_Effective_Date</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Opp KPI Validation Effective Date</shortDescription>
+        <value>2024-09-20</value>
+    </labels>
+    <labels>
+        <fullName>Opp_validation_effective_Date</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Opp validation effective Date</shortDescription>
+        <value>2024-07-01</value>
+    </labels>
+    <labels>
+        <fullName>OpportunityProductReportId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OpportunityProductReportId</shortDescription>
+        <value>00OUa0000072E66MAE</value>
+    </labels>
+    <labels>
+        <fullName>Self_Service_Price_Book_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Self Service Price Book Id</shortDescription>
+        <value>01s5Y000006KBxhQAG</value>
+    </labels>
+    <labels>
+        <fullName>Standard_Price_Book_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Standard Price Book Id</shortDescription>
+        <value>01s5Y000005eHptQAE</value>
+    </labels>
+</CustomLabels>

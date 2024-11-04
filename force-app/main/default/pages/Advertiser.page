@@ -1,0 +1,29 @@
+<apex:page standardController="Account" extensions="AdvertiserController" lightningStylesheets="true">
+    <apex:form >
+        <apex:pageBlock title="Advertisers" >
+            <apex:pageBlockTable value="{!agencies}" var="agency" title="Agencies">
+                <apex:variable value="{!0}" var="cnt"/>
+                <!--apex:inlineEditSupport showOnEdit="update, cancelButton"
+                                        hideOnEdit="editButton"
+                                        event="onclick"
+                                        changedStyleClass="myBoldClass"
+                                        resetFunction="resetInlineEdit">
+                </apex:inlineEditSupport-->
+                <!--apex:column headerValue="Name" width="30%">
+                    <apex:outputfield value="{!agency.Name}"/>
+                </apex:column-->
+                <apex:column headerValue="Advertiser" width="80%">
+                    <apex:outputfield value="{!agency.Account__c}"/>
+                </apex:column>
+                <!--apex:column width="20%">
+                    <apex:commandlink id="remove" action="{!removeRecord}" value="Remove" immediate="true">
+                        <apex:param name="index" value="{!cnt}"/>
+                    </apex:commandlink>
+                    <apex:variable var="cnt" value="{!cnt+1}"/>
+                </apex:column-->
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        <!--apex:commandButton id="add" action="{!addRecord}" value="Add"/>
+        <apex:commandButton id="saveRecords" action="{!saveRecords}" value="Save"/-->
+    </apex:form>
+</apex:page>

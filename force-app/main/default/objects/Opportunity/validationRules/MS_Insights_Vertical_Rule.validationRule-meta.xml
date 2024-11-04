@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MS_Insights_Vertical_Rule</fullName>
+    <active>false</active>
+    <errorConditionFormula>IF( (Pricebook2.Name == &apos;Managed Service&apos; || Pricebook2.Name == &apos;Insights&apos;) &amp;&amp; (ISPICKVAL(Seller_Region__c, &apos;Programmatic - US&apos;) || ISPICKVAL(Seller_Region__c, &apos;Programmatic - International&apos;)) , true, false)</errorConditionFormula>
+    <errorDisplayField>Seller_Region__c</errorDisplayField>
+    <errorMessage>Selecting Programmatic verticals for Managed Service and Insights Opportunities is not allowed.</errorMessage>
+</ValidationRule>

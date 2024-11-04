@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Brand Insights</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Brand Insights</value>
+    </caseValues>
+    <layouts>
+        <layout>Brand Insights Layout</layout>
+        <sections>
+            <label><!-- Competitive Spends Insights --></label>
+            <section>Competitive Spends Insights</section>
+        </sections>
+        <sections>
+            <label><!-- Creative Resonance Insights --></label>
+            <section>Creative Resonance Insights</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Reach &amp; Frequency Insights --></label>
+            <section>Reach &amp; Frequency Insights</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Brand Insights Layout - LAR</layout>
+        <sections>
+            <label><!-- Competitive Spends Insights --></label>
+            <section>Competitive Spends Insights</section>
+        </sections>
+        <sections>
+            <label><!-- Creative Resonance Insights --></label>
+            <section>Creative Resonance Insights</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- LAR Insights --></label>
+            <section>LAR Insights</section>
+        </sections>
+        <sections>
+            <label><!-- Reach &amp; Frequency Insights --></label>
+            <section>Reach &amp; Frequency Insights</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

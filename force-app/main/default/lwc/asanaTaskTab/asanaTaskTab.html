@@ -1,0 +1,27 @@
+<template>
+  <h3 class="slds-section-title--divider slds-var-m-top_medium">
+    Asana Comments
+  </h3>
+  <template if:true={taskUpdates}>
+      <lightning-accordion class="product-items" allow-multiple-sections-open>
+        <template for:each={taskUpdates} for:item="taskUpdate">
+          <div key={taskUpdate.created_at}>
+          <lightning-accordion-section label={taskUpdate.created_by.name}>
+            <lightning-formatted-rich-text value={taskUpdate.html_text}></lightning-formatted-rich-text>
+          </lightning-accordion-section>
+          </div>
+        </template>
+      </lightning-accordion>
+  </template>
+  <template if:true={taskId}>
+    <lightning-input placeholder="Add comment here..."></lightning-input>
+    <lightning-button
+        variant="brand"
+        label="Add a comment"
+        title="Add a comment"
+        onclick={postComment}
+        class="slds-align_absolute-center"
+    >
+  </lightning-button>
+  </template>
+</template>

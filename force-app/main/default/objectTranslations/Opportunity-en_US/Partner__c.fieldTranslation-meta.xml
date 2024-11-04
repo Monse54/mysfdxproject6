@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Select Magnite if this opportunity was in partnership with Magnite --></help>
+    <label><!-- Partner --></label>
+    <name>Partner__c</name>
+    <picklistValues>
+        <masterLabel>DeepIntent</masterLabel>
+        <translation><!-- DeepIntent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Magnite</masterLabel>
+        <translation><!-- Magnite --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

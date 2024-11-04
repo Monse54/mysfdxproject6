@@ -1,0 +1,8 @@
+<template >
+    <template if:true={isColumnsDataAvailable}>
+        <div class="slds-p-horizontal_small">
+            <lightning-datatable key-field="id" data={data} columns={columns} hide-checkbox-column="true" column-widths-mode="auto" min-column-width="100">
+            </lightning-datatable>
+        </div>
+    </template>
+</template>

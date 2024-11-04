@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- SFDC Product Name --></label>
+    <name>SFDC_Product_Name__c</name>
+    <picklistValues>
+        <masterLabel>CTV Native</masterLabel>
+        <translation><!-- CTV Native --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CTV Video</masterLabel>
+        <translation><!-- CTV Video --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Display</masterLabel>
+        <translation><!-- Display --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Video</masterLabel>
+        <translation><!-- Video --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

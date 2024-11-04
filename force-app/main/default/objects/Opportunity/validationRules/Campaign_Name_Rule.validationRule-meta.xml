@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Campaign_Name_Rule</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISBLANK(Campaign_Name__c),
+Probability &gt;= 0.25,
+DATEVALUE(CreatedDate) &gt; DATEVALUE($Label.Opp_validation_effective_Date),
+NOT(Skip_Validations__c)
+)</errorConditionFormula>
+    <errorDisplayField>Campaign_Name__c</errorDisplayField>
+    <errorMessage>Campaign Name is a mandatory field at RFP Received and later stages</errorMessage>
+</ValidationRule>

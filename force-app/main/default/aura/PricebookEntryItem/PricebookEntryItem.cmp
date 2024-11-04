@@ -1,0 +1,19 @@
+<!--
+ - Created by cxu on 7/02/2017.
+ -->
+
+<aura:component description="PricebookEntryItem">
+    <aura:attribute name="entry" type="PricebookEntry[]"></aura:attribute>
+    <aura:attribute name="item" type="OpportunityLineItem"></aura:attribute>
+    <li role="presentation" onclick="{!c.selectEntry}">
+        <span class="slds-lookup__item-action slds-media" role="option">
+
+            <lightning:icon iconName="standard:product" class="slds-icon-standard-product slds-icon--small slds-media__figure"
+                            size="small"></lightning:icon>
+            <div class="slds-media__body">
+                <div class="slds-lookup__result-text">{!v.entry.Product2.Name}</div>
+                <span class="slds-lookup__result-meta slds-text-body--small">{!v.entry.Product2.ProductCode} • <ui:outputCurrency value="{!v.entry.UnitPrice}"/></span>
+            </div>
+        </span>
+    </li>
+</aura:component>

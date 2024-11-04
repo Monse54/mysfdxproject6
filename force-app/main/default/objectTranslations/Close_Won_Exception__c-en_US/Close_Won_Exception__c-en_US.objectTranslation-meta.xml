@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Close Won Exception</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Close Won Exceptions</value>
+    </caseValues>
+    <layouts>
+        <layout>Close Won Exception Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please fill Account or Owner and try again. --></errorMessage>
+        <name>Account_or_Owner_Mandatory</name>
+    </validationRules>
+</CustomObjectTranslation>

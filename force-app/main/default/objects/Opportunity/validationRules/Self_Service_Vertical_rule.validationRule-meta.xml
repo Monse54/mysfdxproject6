@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Self_Service_Vertical_rule</fullName>
+    <active>false</active>
+    <errorConditionFormula>IF(Pricebook2.Name == &apos;Self Service&apos; &amp;&amp; NOT(ISPICKVAL(Seller_Region__c, &apos;Programmatic - US&apos;)) &amp;&amp;
+NOT(ISPICKVAL(Seller_Region__c, &apos;Programmatic - International&apos;)), true, false)</errorConditionFormula>
+    <errorDisplayField>Seller_Region__c</errorDisplayField>
+    <errorMessage>Vertical should be one of &apos;Programmatic - US&apos; or &apos;Programmatic - International&apos; for Self Service Opportunities</errorMessage>
+</ValidationRule>

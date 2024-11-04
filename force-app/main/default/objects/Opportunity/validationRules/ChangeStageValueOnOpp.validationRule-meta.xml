@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ChangeStageValueOnOpp</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    OR(
+        ISPICKVAL(StageName, &apos;Waiting on Assets - Closed Won&apos;),
+        ISPICKVAL(StageName, &apos;Closed Won&apos;)
+    ),
+    ISBLANK(TEXT(IO_Number_Available__c)),
+NOT(Skip_Validations__c)
+
+)</errorConditionFormula>
+    <errorMessage>Please select a value other than &apos;None&apos; in the IO Number Available field when moving the opportunity to &apos;Closed Won - Waiting for Assets&apos; or &apos;Closed Won&apos; stages.</errorMessage>
+</ValidationRule>

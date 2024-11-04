@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Corporate &amp; Self Service Layout</layout>
+        <sections>
+            <label><!-- Billing Details --></label>
+            <section>Billing Details</section>
+        </sections>
+        <sections>
+            <label><!-- Campaign Info --></label>
+            <section>Campaign Info</section>
+        </sections>
+        <sections>
+            <label><!-- Opportunity Status --></label>
+            <section>Opportunity Status</section>
+        </sections>
+        <sections>
+            <label><!-- Partnerships --></label>
+            <section>Partnerships</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Managed Services Layout</layout>
+        <sections>
+            <label><!-- Billing Details --></label>
+            <section>Billing Details</section>
+        </sections>
+        <sections>
+            <label><!-- Campaign Info --></label>
+            <section>Campaign Info</section>
+        </sections>
+        <sections>
+            <label><!-- Opportunity Status --></label>
+            <section>Opportunity Status</section>
+        </sections>
+        <sections>
+            <label><!-- Partnerships --></label>
+            <section>Partnerships</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Managed Services Layout For Media Mint User</layout>
+        <sections>
+            <label><!-- Billing Details --></label>
+            <section>Billing Details</section>
+        </sections>
+        <sections>
+            <label><!-- Campaign Info --></label>
+            <section>Campaign Info</section>
+        </sections>
+        <sections>
+            <label><!-- Opportunity Status --></label>
+            <section>Opportunity Status</section>
+        </sections>
+        <sections>
+            <label><!-- Partnerships --></label>
+            <section>Partnerships</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Managed Services Reseller Layout</layout>
+        <sections>
+            <label><!-- Billing Details --></label>
+            <section>Billing Details</section>
+        </sections>
+        <sections>
+            <label><!-- Campaign Info --></label>
+            <section>Campaign Info</section>
+        </sections>
+        <sections>
+            <label><!-- Opportunity Status --></label>
+            <section>Opportunity Status</section>
+        </sections>
+        <sections>
+            <label><!-- Partnerships --></label>
+            <section>Partnerships</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Opportunity Layout</layout>
+        <sections>
+            <label><!-- Billing/Legal --></label>
+            <section>Billing/Legal</section>
+        </sections>
+        <sections>
+            <label><!-- Campaign Highlights --></label>
+            <section>Campaign Highlights</section>
+        </sections>
+        <sections>
+            <label><!-- Opportunity Details --></label>
+            <section>Opportunity Details</section>
+        </sections>
+        <sections>
+            <label><!-- Partnerships --></label>
+            <section>Partnerships</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Parent Opportunity Layout</layout>
+        <sections>
+            <label><!-- Billing Details --></label>
+            <section>Billing Details</section>
+        </sections>
+        <sections>
+            <label><!-- Opportunity Info --></label>
+            <section>Opportunity Info</section>
+        </sections>
+        <sections>
+            <label><!-- Opportunity Status --></label>
+            <section>Opportunity Status</section>
+        </sections>
+        <sections>
+            <label><!-- Partnerships --></label>
+            <section>Partnerships</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Marketing Support --></label>
+        <name>Marketing_Support</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Case --></label>
+        <name>New_Case</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- 1-Managed Service --></label>
+        <name>One_Managed_Service</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Parent Opportunity --></label>
+        <name>Parent_Opportunity</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- 2-Self Service --></label>
+        <name>Self_Service</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- 3-Corporate --></label>
+        <name>Three_Corporate</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Please enter the AM before marking the opp Won --></errorMessage>
+        <name>AM_name_mandatory_on_Closed_Won</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill Primary Billing Contact. --></errorMessage>
+        <name>Billing_Contact_on_Closed_Won</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Cannot create or update an opportunity against a non approved account. --></errorMessage>
+        <name>Block_Opportunity_Creation_Or_Update</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Campaign Name is a mandatory field at RFP Received and later stages --></errorMessage>
+        <name>Campaign_Name_Rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select a value other than &apos;None&apos; in the IO Number Available field when moving the opportunity to &apos;Closed Won - Waiting for Assets&apos; or &apos;Closed Won&apos; stages. --></errorMessage>
+        <name>ChangeStageValueOnOpp</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Probability must be 25% or lower when creating and opportunity --></errorMessage>
+        <name>CheckOppProbaility</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Currency cannot be changed if the Opportunity has been closed once --></errorMessage>
+        <name>Currency_Change_After_Closed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Default Billing Ad Server is required when the opportunity is in the &apos;Waiting on Assets - Closed Won&apos; or &apos;Closed Won&apos; stages. --></errorMessage>
+        <name>Default_Billing_Ad_Server</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please ensure that the &apos;Dropbox URL&apos; field is filled in and begins with &apos;http://&apos; or &apos;https://&apos; to be valid. --></errorMessage>
+        <name>DropBox_Url_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Due Date is required when the Opportunity stage is set to &apos;Proposal Requested --></errorMessage>
+        <name>Due_date_required_at_proposal_req_parent</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Flight End date must be selected for Self Service Opportunities if Estimated Booking Amount is entered. --></errorMessage>
+        <name>End_Date_on_Self_Service_Estimate</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Billing Contact has no email address set --></errorMessage>
+        <name>Fifth_Billing_Contact_Email_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 3P verification partner is required at the Proposal Submitted stage and later. --></errorMessage>
+        <name>For_3P_verification_partner</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Original Booking Amount is required at the Closed Won stages --></errorMessage>
+        <name>For_Original_Booking_Amount</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Enter at least one of the following fields: Account Name, Primary Agency, or Holding Company for Parent Opportunity record type. --></errorMessage>
+        <name>For_Parent_Opp</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The &apos;Primary KPI&apos; and &apos;Secondary KPI&apos; fields are required at the &apos;Proposal Submitted&apos; stage and Later. --></errorMessage>
+        <name>For_Primary_and_Secondary_KPI</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Country is required in  &apos;Closed Won - Waiting for Assets&apos; or &apos;Closed Won&apos; stages.&quot; --></errorMessage>
+        <name>For_country</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- When the Opportunity stage is &apos;Proposal Submitted&apos;, the following fields are required: Total Booking Amount, Contract Start Date, and Contract End Date. --></errorMessage>
+        <name>For_proposal_submitted_parent_opp</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Billing Contact has no email address set --></errorMessage>
+        <name>Fourth_Billing_Contact_Email_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter the IO Number or pick Not Available in IO Number Available list --></errorMessage>
+        <name>IO_Number_required_if_available</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- KPI Note is required for Opportunities at the &apos;Waiting for Assets-Closed Won   &apos; or &apos;Closed Won&apos; stage. --></errorMessage>
+        <name>KPI_note_on_closed_won</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- CompanyId should be a numeric value --></errorMessage>
+        <name>LID__Check_CompanyId_Value</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must provide more detail for a Loss Reason &quot;Other&quot;. --></errorMessage>
+        <name>Loss_Reason_Other_Additional_Information</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Selecting Programmatic verticals for Managed Service and Insights Opportunities is not allowed. --></errorMessage>
+        <name>MS_Insights_Vertical_Rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- For Managed Service opps, please select market type as either &quot;M&amp;E&quot; or &quot;GM&quot; --></errorMessage>
+        <name>MS_with_only_Market_Type_as_GM_ME</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Main Point of Contact is required at Verbal Confirm stage and later stages --></errorMessage>
+        <name>Main_Point_Of_Contact</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill the Main Point of Contact. --></errorMessage>
+        <name>Main_Point_Of_Contact_Primary</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Net Terms Note is required if Net Terms is Other --></errorMessage>
+        <name>Net_Terms_Others_Note</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Non test opp for test account --></errorMessage>
+        <name>No_Prod_Opp_in_Test_Account</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Non test opp for test account --></errorMessage>
+        <name>No_Prod_Opp_in_Test_Primary_Agency</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Non test opp for test account --></errorMessage>
+        <name>No_Prod_Opp_in_Test_Secondary_Agency</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Non test opp for test account --></errorMessage>
+        <name>No_Prod_Opp_in_Test_Tertiary_Agency</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Opportunity Record Type cannot be updated --></errorMessage>
+        <name>No_Record_Type_Change</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only one of &apos;Primary Agency&apos; or &apos;Client Direct&apos; fields should be filled. --></errorMessage>
+        <name>Non_Direct_Client_Check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please either fill the &apos;Primary Agency&apos; field or select the &apos;Client Direct&apos; field. --></errorMessage>
+        <name>Non_Direct_Client_Check_Both_Empty</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If &apos;None&apos; or &apos;Not Available&apos; is selected, the IO Number field must be empty. --></errorMessage>
+        <name>None_or_Not_Available_selected</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- PMX Lift can only be filled when the Primary Agency is &apos;Apex Exchange&apos; or &apos;Publicis PMX&apos;. --></errorMessage>
+        <name>PMX_Lift_Agency_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The &quot;PMX Lift&quot; is required when the &quot;Primary Agency&quot; is set to &quot;Apex Exchange&quot; or &quot;Publicis PMX&quot;. --></errorMessage>
+        <name>PMX_Lift_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot close this Opportunity. --></errorMessage>
+        <name>Partner_CommunityUser_cannot_close_Oppty</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Partner is required at the &apos;Waiting for Assets-Closed Won &apos; or &apos;Closed Won&apos; stages --></errorMessage>
+        <name>Partner_field_rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter Partner Seller Email since this opportunity is in partnership with Magnite or DeepIntent --></errorMessage>
+        <name>Partnership_Email_test</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter partner Seller Name since this Opportunity is in partnership with Magnite Or DeepIntent --></errorMessage>
+        <name>Partnership_Name_test</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Parent Opportunities cannot be associated with any price book, please clear out the price book field and continue --></errorMessage>
+        <name>Prevent_Price_Book_On_Parent_Opportunity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Primary Billing Contact and Main Point of Contact (Primary) cannot be the same. Please ensure they are different. --></errorMessage>
+        <name>PrimaryContactAndMainContactNotSame</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Billing Contact has no email address set --></errorMessage>
+        <name>Primary_Billing_Contact_Email_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot change Dropbox URL. --></errorMessage>
+        <name>Reseller_cannot_enter_Dropbox</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Billing Contact has no email address set --></errorMessage>
+        <name>Secondary_Billing_Contact_Email_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Vertical should be one of &apos;Programmatic - US&apos; or &apos;Programmatic - International&apos; for Self Service Opportunities --></errorMessage>
+        <name>Self_Service_Vertical_rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select a Loss Reason when the Stage is set to &apos;Closed Lost&apos;. --></errorMessage>
+        <name>Stagesettocloselost</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Flight Start date must be selected for Self Service Opportunities if Estimated Booking Amount is entered. --></errorMessage>
+        <name>Start_Date_on_Self_Service_Estimate</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Billing Contact has no email address set --></errorMessage>
+        <name>Third_Billing_Contact_Email_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Either select &apos;No Third Party Verification Required&apos; alone or choose other options except &apos;No Third Party Verification Required. --></errorMessage>
+        <name>X3p_options</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- IO Number must be provided when &apos;Available&apos; is selected in &apos;IO Number Available&apos; field and Opportunity is in &apos;Waiting on Assets - Closed Won&apos; or &apos;Closed Won&apos; stage. --></errorMessage>
+        <name>checkIO_Number_AvailableIsAvailable</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Primary Kpi and Secondary Kpi cannot be same --></errorMessage>
+        <name>primary_and_secondary_kpi</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- End date should be greater than start date --></errorMessage>
+        <name>start_greater_end_date</name>
+    </validationRules>
+</CustomObjectTranslation>

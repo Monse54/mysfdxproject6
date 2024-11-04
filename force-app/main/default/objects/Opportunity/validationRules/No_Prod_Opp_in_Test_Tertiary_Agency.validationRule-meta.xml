@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Prod_Opp_in_Test_Tertiary_Agency</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  NOT(Is_Test_Opportunity__c),
+  Tertiary_Agency__r.Is_Test_Account__c,
+NOT(Skip_Validations__c)
+)</errorConditionFormula>
+    <errorDisplayField>Tertiary_Agency__c</errorDisplayField>
+    <errorMessage>Non test opp for test account</errorMessage>
+</ValidationRule>

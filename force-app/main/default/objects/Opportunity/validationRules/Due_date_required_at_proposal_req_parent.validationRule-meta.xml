@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Due_date_required_at_proposal_req_parent</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND($RecordType.DeveloperName = &quot;Parent_Opportunity&quot;,
+    ISPICKVAL(StageName, &quot;Proposal Requested&quot;),
+
+    ISBLANK(Due_Date__c)
+)</errorConditionFormula>
+    <errorDisplayField>Due_Date__c</errorDisplayField>
+    <errorMessage>Due Date is required when the Opportunity stage is set to &apos;Proposal Requested</errorMessage>
+</ValidationRule>

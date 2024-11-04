@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Record30</label>
+    <protected>false</protected>
+    <values>
+        <field>AM_Email__c</field>
+        <value xsi:type="xsd:string">emily.leigh@lgads.tv</value>
+    </values>
+    <values>
+        <field>AM_Lead_Email__c</field>
+        <value xsi:type="xsd:string">clare@lgads.tv</value>
+    </values>
+    <values>
+        <field>AM_Lead__c</field>
+        <value xsi:type="xsd:string">Clare Rubel</value>
+    </values>
+    <values>
+        <field>Account_Manager_Name__c</field>
+        <value xsi:type="xsd:string">Emily Leigh</value>
+    </values>
+    <values>
+        <field>Campaign_Manager_Email__c</field>
+        <value xsi:type="xsd:string">tiffany.cook@lgads.tv</value>
+    </values>
+    <values>
+        <field>Campaign_Manager__c</field>
+        <value xsi:type="xsd:string">Tiffany Cook</value>
+    </values>
+    <values>
+        <field>Seller_Email__c</field>
+        <value xsi:type="xsd:string">jared@lgads.tv</value>
+    </values>
+    <values>
+        <field>Seller_Name__c</field>
+        <value xsi:type="xsd:string">Jared Friedman</value>
+    </values>
+    <values>
+        <field>Team_Lead__c</field>
+        <value xsi:type="xsd:string">sriranjani.jeyaprakasan@lgads.tv</value>
+    </values>
+    <values>
+        <field>TechOps_Email__c</field>
+        <value xsi:type="xsd:string">fen.li@lgads.tv</value>
+    </values>
+    <values>
+        <field>TechOps__c</field>
+        <value xsi:type="xsd:string">Fen Li</value>
+    </values>
+</CustomMetadata>

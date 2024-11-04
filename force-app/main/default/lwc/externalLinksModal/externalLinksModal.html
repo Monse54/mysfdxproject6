@@ -1,0 +1,31 @@
+<template>
+  <!-- <div class="custom-card"> -->
+  <lightning-card class="custom-card">
+    <h3 slot="title" class="slds-card__header slds-grid custom-header">
+      <lightning-icon
+        icon-name="standard:attach"
+        alternative-text="links"
+        title="External Links"
+        size="small"
+      ></lightning-icon>
+      <span class="header-text">External Links</span>
+    </h3>
+    <hr class="custom-hr" />
+    <div class="slds-card__body custom-body">
+      <div if:true={hasLinks}>
+        <ul>
+          <template for:each={links} for:item="link">
+            <li class="custom-link" key={link.id}>
+              <a href={link.URL} target="_blank">{link.label}</a>
+            </li>
+          </template>
+        </ul>
+      </div>
+      <div if:false={hasLinks}>
+        <h5>There are no External links for this Opportunity</h5>
+      </div>
+      <div style="display: none">{recordId}</div>
+    </div>
+  </lightning-card>
+  <!-- </div> -->
+</template>

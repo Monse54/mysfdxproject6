@@ -1,0 +1,9 @@
+<!--
+ - Created by cxu on 7/02/2017.
+ -->
+
+<design:component label="Fast Opportunity Products">
+    <sfdc:objects >
+        <sfdc:object >Opportunity</sfdc:object>
+    </sfdc:objects>
+</design:component>

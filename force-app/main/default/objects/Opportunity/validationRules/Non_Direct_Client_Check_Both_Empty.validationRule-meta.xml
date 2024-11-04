@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Non_Direct_Client_Check_Both_Empty</fullName>
+    <active>true</active>
+    <description>Agency and direct client not filled.</description>
+    <errorConditionFormula>AND(
+NOT( $Profile.Name = &quot;Partner Resellers Profile&quot;),
+!Client_Direct__c, ISBLANK(Agency__c),
+NOT(Skip_Validations__c)
+)</errorConditionFormula>
+    <errorMessage>Please either fill the &apos;Primary Agency&apos; field or select the &apos;Client Direct&apos; field.</errorMessage>
+</ValidationRule>

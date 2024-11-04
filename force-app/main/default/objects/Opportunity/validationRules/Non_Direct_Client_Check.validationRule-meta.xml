@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Non_Direct_Client_Check</fullName>
+    <active>true</active>
+    <description>Agency mandatory for non direct client</description>
+    <errorConditionFormula>AND(Client_Direct__c, !ISBLANK(Agency__c),
+NOT(Skip_Validations__c))</errorConditionFormula>
+    <errorMessage>Only one of &apos;Primary Agency&apos; or &apos;Client Direct&apos; fields should be filled.</errorMessage>
+</ValidationRule>

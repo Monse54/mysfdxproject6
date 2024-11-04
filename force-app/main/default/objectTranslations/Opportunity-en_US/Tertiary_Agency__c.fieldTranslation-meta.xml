@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Please select any other Agency this Opp is related to. Note that invoices will be generated for the Primary Agency only. --></help>
+    <label><!-- Tertiary Agency --></label>
+    <name>Tertiary_Agency__c</name>
+    <relationshipLabel><!-- Opportunities (Tertiary Agency) --></relationshipLabel>
+</CustomFieldTranslation>

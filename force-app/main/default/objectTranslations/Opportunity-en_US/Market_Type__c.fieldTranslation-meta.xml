@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>
+        <!-- M&amp;E - Media and Entertainment
+GM - General Market -->
+    </help>
+    <label><!-- Market Type --></label>
+    <name>Market_Type__c</name>
+    <picklistValues>
+        <masterLabel>GM</masterLabel>
+        <translation><!-- GM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>M&amp;E</masterLabel>
+        <translation><!-- M&amp;E --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Others</masterLabel>
+        <translation><!-- Others --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

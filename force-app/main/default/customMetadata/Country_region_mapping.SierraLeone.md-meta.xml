@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Sierra Leone</label>
+    <protected>false</protected>
+    <values>
+        <field>All_TimeZone__c</field>
+        <value xsi:type="xsd:string">Africa/Freetown</value>
+    </values>
+    <values>
+        <field>country_code_2__c</field>
+        <value xsi:type="xsd:string">SL</value>
+    </values>
+    <values>
+        <field>country_code_3__c</field>
+        <value xsi:type="xsd:string">SLE</value>
+    </values>
+    <values>
+        <field>primary_tz__c</field>
+        <value xsi:type="xsd:string">Africa/Freetown</value>
+    </values>
+    <values>
+        <field>region_id__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

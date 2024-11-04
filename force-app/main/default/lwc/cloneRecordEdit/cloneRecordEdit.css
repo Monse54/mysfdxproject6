@@ -1,0 +1,8 @@
+.dummy {
+  color: black;
+}
+.custom-input-field .slds-form-element__control input {
+  width: 100%; /* Adjust as needed */
+  height: auto; /* Adjust as needed */
+  font-size: larger; /* Adjust as needed */
+}

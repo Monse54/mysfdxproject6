@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Default_Billing_Ad_Server</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    OR(
+        ISPICKVAL(StageName, &apos;Waiting on Assets - Closed Won&apos;),
+        ISPICKVAL(StageName, &apos;Closed Won&apos;)
+    ),
+ISBLANK(TEXT(Default_Billing_Ad_Server__c)),
+NOT(Skip_Validations__c),
+DATEVALUE(CreatedDate) &gt; DATEVALUE($Label.Opp_validation_effective_Date) 
+)</errorConditionFormula>
+    <errorDisplayField>Default_Billing_Ad_Server__c</errorDisplayField>
+    <errorMessage>Default Billing Ad Server is required when the opportunity is in the &apos;Waiting on Assets - Closed Won&apos; or &apos;Closed Won&apos; stages.</errorMessage>
+</ValidationRule>

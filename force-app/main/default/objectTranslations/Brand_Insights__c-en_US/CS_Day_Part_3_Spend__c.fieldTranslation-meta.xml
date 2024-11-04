@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- CS Day Part 3 Spend --></label>
+    <name>CS_Day_Part_3_Spend__c</name>
+</CustomFieldTranslation>

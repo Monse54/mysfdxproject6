@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reseller_cannot_enter_Dropbox</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISCHANGED(Dropbox_URL__c )  &amp;&amp;
+$Profile.Name = &quot;Partner Resellers Profile&quot;</errorConditionFormula>
+    <errorDisplayField>Dropbox_URL__c</errorDisplayField>
+    <errorMessage>You cannot change Dropbox URL.</errorMessage>
+</ValidationRule>

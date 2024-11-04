@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>primary_and_secondary_kpi</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT(ISBLANK(TEXT(Primary_KPI__c))),
+    NOT(ISBLANK(TEXT(Secondary_KPI__c))),
+    DATEVALUE(CreatedDate) &gt; 
+    DATEVALUE($Label.Opp_KPI_Validation_Effective_Date),
+    TEXT(Primary_KPI__c) = TEXT(Secondary_KPI__c)
+)</errorConditionFormula>
+    <errorMessage>Primary Kpi and Secondary Kpi cannot be same</errorMessage>
+</ValidationRule>

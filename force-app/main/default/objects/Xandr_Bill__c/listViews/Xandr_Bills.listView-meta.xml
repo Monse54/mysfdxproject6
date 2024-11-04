@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Xandr_Bills</fullName>
+    <columns>NAME</columns>
+    <columns>Date__c</columns>
+    <columns>Curated_Deal__c</columns>
+    <columns>Curated_Deal_Insertion_Order__c</columns>
+    <columns>Curated_Deal_Line_Item__c</columns>
+    <columns>Curator_Revenue__c</columns>
+    <columns>Curator_Margin__c</columns>
+    <filterScope>Mine</filterScope>
+    <label>Xandr Bills</label>
+</ListView>

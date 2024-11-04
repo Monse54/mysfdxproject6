@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Type__c</fullName>
+    <label>Product Type</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cross Screen Display</fullName>
+                <default>false</default>
+                <label>Cross Screen Display</label>
+            </value>
+            <value>
+                <fullName>Cross Screen Video</fullName>
+                <default>false</default>
+                <label>Cross Screen Video</label>
+            </value>
+            <value>
+                <fullName>Cross Screen Video - Last Impression Takeover</fullName>
+                <default>false</default>
+                <label>Cross Screen Video - Last Impression Takeover</label>
+            </value>
+            <value>
+                <fullName>CTV Video</fullName>
+                <default>false</default>
+                <label>CTV Video</label>
+            </value>
+            <value>
+                <fullName>LG Native</fullName>
+                <default>false</default>
+                <label>LG Native</label>
+            </value>
+            <value>
+                <fullName>LG Native - 12 HR Takeover</fullName>
+                <default>false</default>
+                <label>LG Native - 12 HR Takeover</label>
+            </value>
+            <value>
+                <fullName>LG Native - 24 HR Takeover</fullName>
+                <default>false</default>
+                <label>LG Native - 24 HR Takeover</label>
+            </value>
+            <value>
+                <fullName>LG Native - 6 HR Takeover</fullName>
+                <default>false</default>
+                <label>LG Native - 6 HR Takeover</label>
+            </value>
+            <value>
+                <fullName>Social</fullName>
+                <default>false</default>
+                <label>Social</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Account Layout</layout>
+        <sections>
+            <label><!-- Account Highlights --></label>
+            <section>Account Highlights</section>
+        </sections>
+        <sections>
+            <label><!-- Brand Info (Applicable For Brand / Client) --></label>
+            <section>Brand Info (Applicable For Brand / Client)</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Advertiser Layout</layout>
+        <sections>
+            <label><!-- Account Highlights --></label>
+            <section>Account Highlights</section>
+        </sections>
+        <sections>
+            <label><!-- Brand Info (Applicable For Brand / Client) --></label>
+            <section>Brand Info (Applicable For Brand / Client)</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Agency Layout</layout>
+        <sections>
+            <label><!-- Account Highlights --></label>
+            <section>Account Highlights</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Partner Layout</layout>
+        <sections>
+            <label><!-- Account Highlights --></label>
+            <section>Account Highlights</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Reseller Account Layout</layout>
+        <sections>
+            <label><!-- Account Highlights --></label>
+            <section>Account Highlights</section>
+        </sections>
+        <sections>
+            <label><!-- Brand Info (Applicable For Brand / Client) --></label>
+            <section>Brand Info (Applicable For Brand / Client)</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Reseller Advertiser Layout</layout>
+        <sections>
+            <label><!-- Account Highlights --></label>
+            <section>Account Highlights</section>
+        </sections>
+        <sections>
+            <label><!-- Brand Info (Applicable For Brand / Client) --></label>
+            <section>Brand Info (Applicable For Brand / Client)</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Reseller Agency Layout</layout>
+        <sections>
+            <label><!-- Account Highlights --></label>
+            <section>Account Highlights</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Reseller Partner Layout</layout>
+        <sections>
+            <label><!-- Account Highlights --></label>
+            <section>Account Highlights</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Child Account --></label>
+        <name>Child_Account</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Create Contract --></label>
+        <name>Create_Contract</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Marketing Support --></label>
+        <name>Marketing_Support</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New --></label>
+        <name>New</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Brand Insights --></label>
+        <name>New_Brand_Insights</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Advertiser --></label>
+        <name>Advertiser</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Agency --></label>
+        <name>Agency</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Demand Partner --></label>
+        <name>Demand_Partner</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Partner --></label>
+        <name>Partner</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Account Review Status can&apos;t be Approved or Rejected on account creation. --></errorMessage>
+        <name>Account_Approval_Status</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- CompanyId should be a numeric value --></errorMessage>
+        <name>LID__Check_CompanyId_Value</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can&apos;t change the name, please contact system administrator. --></errorMessage>
+        <name>Name_Change_Validation</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+</CustomObjectTranslation>

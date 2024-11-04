@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SpotX_Bills</fullName>
+    <columns>NAME</columns>
+    <columns>Channel_Name__c</columns>
+    <columns>Deal_Name__c</columns>
+    <columns>Date__c</columns>
+    <columns>Gross__c</columns>
+    <columns>Gross_eCPM__c</columns>
+    <columns>Gross_Revenue__c</columns>
+    <columns>Impressions__c</columns>
+    <columns>Net_Revenue__c</columns>
+    <filterScope>Mine</filterScope>
+    <label>SpotX Bills</label>
+</ListView>

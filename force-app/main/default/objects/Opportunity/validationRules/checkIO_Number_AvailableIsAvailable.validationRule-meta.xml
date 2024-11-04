@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>checkIO_Number_AvailableIsAvailable</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+    ISPICKVAL(IO_Number_Available__c, &apos;Available&apos;),
+    OR(
+        ISPICKVAL(StageName, &apos;Waiting on Assets - Closed Won&apos;),
+        ISPICKVAL(StageName, &apos;Closed Won&apos;)
+    ),
+    ISBLANK(IO_Number__c),
+NOT(Skip_Validations__c)
+)</errorConditionFormula>
+    <errorMessage>IO Number must be provided when &apos;Available&apos; is selected in &apos;IO Number Available&apos; field and Opportunity is in &apos;Waiting on Assets - Closed Won&apos; or &apos;Closed Won&apos; stage.</errorMessage>
+</ValidationRule>

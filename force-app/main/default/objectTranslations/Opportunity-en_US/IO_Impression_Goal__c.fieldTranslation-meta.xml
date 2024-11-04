@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- IO Impression Goal --></label>
+    <name>IO_Impression_Goal__c</name>
+</CustomFieldTranslation>

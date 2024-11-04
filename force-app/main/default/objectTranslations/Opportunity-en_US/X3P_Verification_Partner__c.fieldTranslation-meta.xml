@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- 3P Verification Partner --></label>
+    <name>X3P_Verification_Partner__c</name>
+    <picklistValues>
+        <masterLabel>DoubleVerify - Out of Geo</masterLabel>
+        <translation><!-- DoubleVerify - Out of Geo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Doubleverify : Brand Safety</masterLabel>
+        <translation><!-- Doubleverify : Brand Safety --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Doubleverify : Brand Suitability</masterLabel>
+        <translation><!-- Doubleverify : Brand Suitability --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Doubleverify : Fraud</masterLabel>
+        <translation><!-- Doubleverify : Fraud --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Doubleverify : Impressions</masterLabel>
+        <translation><!-- Doubleverify : Impressions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Doubleverify : Viewability</masterLabel>
+        <translation><!-- Doubleverify : Viewability --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IAS - Out of Geo</masterLabel>
+        <translation><!-- IAS - Out of Geo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IAS : Brand Safety</masterLabel>
+        <translation><!-- IAS : Brand Safety --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IAS : Brand Suitability</masterLabel>
+        <translation><!-- IAS : Brand Suitability --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IAS : Fraud</masterLabel>
+        <translation><!-- IAS : Fraud --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IAS : Impressions</masterLabel>
+        <translation><!-- IAS : Impressions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IAS : Viewability</masterLabel>
+        <translation><!-- IAS : Viewability --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MOAT - Brand Safety</masterLabel>
+        <translation><!-- MOAT - Brand Safety --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MOAT - Brand Suitability</masterLabel>
+        <translation><!-- MOAT - Brand Suitability --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MOAT - Fraud</masterLabel>
+        <translation><!-- MOAT - Fraud --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MOAT - Impressions</masterLabel>
+        <translation><!-- MOAT - Impressions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MOAT - Out of Geo</masterLabel>
+        <translation><!-- MOAT - Out of Geo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MOAT - Viewability</masterLabel>
+        <translation><!-- MOAT - Viewability --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Third Party Verification Required</masterLabel>
+        <translation><!-- No Third Party Verification Required --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

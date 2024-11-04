@@ -1,0 +1,31 @@
+.custom-card {
+  display: block;
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 7px;
+  padding: 4px;
+}
+
+.custom-link {
+  word-break: break-all;
+}
+
+.custom-header {
+  padding-top: 3px !important;
+  padding-left: 10px !important;
+  border-bottom: 1px rgb(85, 84, 84);
+}
+
+.header-text {
+  padding: 3px 10px 3px 10px;
+  font-size: 15px;
+}
+
+.custom-body {
+  padding: 5px 5px 5px 10px !important;
+}
+
+.custom-hr {
+  margin-top: 0px;
+  margin-bottom: 2px;
+  border-color: rgb(201 201 201);
+}

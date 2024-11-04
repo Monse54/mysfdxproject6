@@ -1,0 +1,8 @@
+<apex:page standardController="OpportunityLineItem">
+    <apex:form >
+        <apex:inputField label="Start Timestamp" value="{!OpportunityLineItem.Day_Part__c}"/>
+        <apex:outputPanel layout="block">
+            <apex:commandButton action="{!save}" value="Save"/>
+        </apex:outputPanel>
+    </apex:form>
+</apex:page>

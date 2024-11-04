@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>Opportunity_Product__c</columns>
+    <columns>NAME</columns>
+    <columns>Deal_Name__c</columns>
+    <columns>Deal_Id__c</columns>
+    <columns>Asana_URL__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>DSP__c</columns>
+    <columns>Inventory_Type__c</columns>
+    <columns>Targeting__c</columns>
+    <columns>CPM_Type__c</columns>
+    <columns>Seat_Id_DSP__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Flight_End_Date__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>CPM__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

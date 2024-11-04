@@ -1,0 +1,190 @@
+<!-- sldsValidatorIgnore -->
+<template>
+  <!-- lightning button for open modal window -->
+  <div class="slds-text-align_right">
+    <lightning-button
+      variant="brand-outline"
+      label="Opportunity Brand"
+      title="Opportunity Brand"
+      onclick={openModal}
+    >
+    </lightning-button>
+  </div>
+
+  <!-- Spinner -->
+  <div if:true={showLoadingSpinner}>
+    <lightning-spinner alternative-text="Loading" size="large">
+    </lightning-spinner>
+  </div>
+
+  <!--Use template if:true to display/hide popup based on isModalOpen value-->
+  <template if:false={isConfirmDialogVisible}>
+    <template if:true={isModalOpen}>
+      <!-- Modal/Popup Box LWC starts here -->
+      <section
+        role="dialog"
+        tabindex="-1"
+        aria-labelledby="modal-heading-01"
+        aria-modal="true"
+        aria-describedby="modal-content-id-1"
+        class="slds-modal slds-fade-in-open"
+      >
+        <div class="slds-modal__container">
+          <!-- Modal/Popup Box LWC header here -->
+          <header class="slds-modal__header">
+            <button
+              class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+              title="Close"
+              onclick={closeModal}
+            >
+              <lightning-icon
+                icon-name="utility:close"
+                alternative-text="close"
+                variant="inverse"
+                size="small"
+              ></lightning-icon>
+              <span class="slds-assistive-text">Close</span>
+            </button>
+            <h2
+              id="modal-heading-01"
+              class="slds-text-heading_medium slds-hyphenate"
+            >
+              Brand Name
+            </h2>
+          </header>
+
+          <!-- Modal/Popup Box LWC body starts here -->
+          <div
+            class="slds-modal__content slds-var-p-around_medium"
+            id="modal-content-id-1"
+          >
+            <template if:true={brandLabel}>
+              <p class="slds-form-element__label">{brandLabel}</p>
+            </template>
+            <div
+              class="slds-combobox_container"
+              aria-expanded="true"
+              aria-haspopup="listbox"
+              role="combobox"
+            >
+              <div
+                class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
+              >
+                <!-- Search Input Box -->
+                <template if:false={showPill}>
+                  <lightning-input
+                    id="lookup-field-1"
+                    label="brand-field"
+                    onchange={searchBrands}
+                    onclick={showBrandRecords}
+                    onblur={blurBrandEvent}
+                    class="inputBox"
+                    type="search"
+                    autocomplete="off"
+                    variant="label-hidden"
+                    placeholder={brandPlaceholder}
+                  >
+                  </lightning-input>
+                  <div if:true={showBrandSpinner}>
+                    <lightning-spinner
+                      alternative-text="Loading"
+                      size="small"
+                    ></lightning-spinner>
+                  </div>
+                </template>
+
+                <!-- Selected Value Pill -->
+                <div if:true={showPill} class="pillContainer">
+                  <lightning-pill
+                    class="fullWidth"
+                    label={selectedBrandRecord.name}
+                    name={selectedBrandRecord.name}
+                    onremove={removeBrand}
+                  >
+                    <lightning-icon
+                      icon-name={iconName}
+                      alternative-text="icon"
+                      size="x-small"
+                    ></lightning-icon>
+                  </lightning-pill>
+                </div>
+
+                <!-- Dropdown List -->
+                <template if:true={showBrandDropdown}>
+                  <div
+                    class="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
+                  >
+                    <ul
+                      class="slds-listbox slds-listbox_vertical recordListBox"
+                    >
+                      <template if:false={message}>
+                        <template for:each={recordsList} for:item="rec">
+                          <li
+                            key={rec.id}
+                            data-key={rec.id}
+                            class="slds-listbox__item eachItem"
+                            onmousedown={selectBrand}
+                          >
+                            <div class="slds-media slds-listbox__option_entity">
+                              <lightning-icon
+                                icon-name={iconName}
+                                alternative-text="icon"
+                                size="small"
+                              ></lightning-icon>
+                              <span class="verticalAlign slds-truncate"
+                                >{rec.name}</span
+                              >
+                            </div>
+                          </li>
+                        </template>
+                      </template>
+                      <template if:true={message}>
+                        <li class="slds-listbox__item">
+                          <span class="slds-media slds-listbox__option_entity"
+                            >{message}</span
+                          >
+                        </li>
+                      </template>
+                    </ul>
+                  </div>
+                </template>
+              </div>
+            </div>
+          </div>
+          <!-- Modal/Popup Box LWC footer starts here -->
+          <footer class="slds-modal__footer">
+            <button
+              class="slds-button slds-button_neutral"
+              onclick={closeModal}
+              title="Cancel"
+            >
+              Cancel
+            </button>
+
+            <button
+              class="slds-button slds-button_brand"
+              onclick={handleConfirmClick}
+              title="Update"
+              name="updateOrCreateBrand"
+            >
+              Submit
+            </button>
+          </footer>
+        </div>
+      </section>
+      <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+  </template>
+
+  <c-confirmation-dialog
+    title="Create New Brand"
+    message={confirmMessage}
+    confirm-label="Create"
+    cancel-label="No, Go Back"
+    visible={isConfirmDialogVisible}
+    original-message="Original Message"
+    name="confirmModal"
+    onclick={handleConfirmClick}
+  >
+  </c-confirmation-dialog>
+</template>
