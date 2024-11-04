@@ -17,7 +17,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
       # Step 2: Make the file updates
-      - name: Update Files
+      - name: backup procedure running
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq curl tar xz-utils 
           curl -s "https://developer.salesforce.com/media/salesforce-cli/sf/channels/stable/sf-linux-x64.tar.xz" -o "my-sfdx-package.tar.xz"
@@ -30,9 +30,6 @@ jobs:
           ls
           pwd
           sf org login jwt --username "${{vars.EMAIL}}" --jwt-key-file "./private.key" --client-id "${{vars.CLIENTID}}"
-      # Step 3: Commit the changes
-      - name: Commit changes
-        run: |
           sf project retrieve start --target-org ${{vars.EMAIL}} --manifest package.xml
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
