@@ -40,6 +40,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          ls
+          pwd
           sudo git push origin master
       - name: Delete Private Key
         if: always()
