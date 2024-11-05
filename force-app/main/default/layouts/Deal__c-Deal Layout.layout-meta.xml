@@ -113,7 +113,6 @@
         <fields>NAME</fields>
         <fields>Opportunity_Seller__c</fields>
         <fields>Percentage__c</fields>
-        <fields>Revenue_Share__c</fields>
         <relatedList>Deal_level_reporting__c.Deal__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>

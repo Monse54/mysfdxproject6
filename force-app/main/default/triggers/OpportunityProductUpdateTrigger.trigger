@@ -176,7 +176,7 @@ if (!oppsToUpdate.isEmpty()) {
             // }
             
             // Don't allow insert a product if opportunity is closed won.
-            if (isActive /*&& !PGRevenueLandingProcessorBatch.skipValidations*/ && Trigger.isInsert && opp.StageName == STAGE_CLOSED_WON) {
+            if (isActive && !PGRevenueLandingProcessorBatch.skipValidations && Trigger.isInsert && opp.StageName == STAGE_CLOSED_WON) {
                 // oli.UnitPrice.addError('Adding products to CLOSED WON Opportunities is not allowed');
                 throw new IllegalArgumentException(
                     'Adding products to CLOSED WON Opportunities is not allowed. Please move the Opportunity to previous stage.'
