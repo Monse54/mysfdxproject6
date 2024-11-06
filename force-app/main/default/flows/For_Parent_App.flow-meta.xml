@@ -36,6 +36,7 @@
             </value>
         </inputParameters>
         <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
         <versionSegment>1</versionSegment>
     </actionCalls>
     <actionCalls>
@@ -74,6 +75,7 @@
             </value>
         </inputParameters>
         <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
         <versionSegment>1</versionSegment>
     </actionCalls>
     <actionCalls>
@@ -109,6 +111,7 @@
             </value>
         </inputParameters>
         <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
         <versionSegment>1</versionSegment>
     </actionCalls>
     <apiVersion>61.0</apiVersion>
@@ -159,6 +162,20 @@
                 <elementReference>$Record.Owner.Email</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>EmaillistforTotalBookingAmount2</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>alec.wells@lgads.tv</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>EmaillistforTotalBookingAmount2</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>kelly.mcmahon@lgads.tv</stringValue>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>Email_Alert</targetReference>
         </connector>
@@ -180,6 +197,13 @@
             <operator>Add</operator>
             <value>
                 <stringValue>nataly.babain@lgads.tv</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>listforProposalrequested</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>alec.wells@lgads.tv</stringValue>
             </value>
         </assignmentItems>
         <connector>

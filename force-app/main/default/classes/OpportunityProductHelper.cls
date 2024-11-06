@@ -240,11 +240,13 @@ public class OpportunityProductHelper {
     
     public static void copyProduct(List<OpportunityLineItem> oliNewList) {
         
-        // Step 1: Collect Opportunity IDs where Product2Id is different from Product__c
+        // Step 1: Collect Opportunity IDs/ productids where Product2Id is different from Product__c
+        Set<Id> productIds = new Set<Id>();
         Set<Id> oppIds = new Set<Id>();
         for (OpportunityLineItem oli : oliNewList) {
             if (oli.Product2Id != oli.Product__c) {
                 oppIds.add(oli.OpportunityId);
+                productIds.add(oli.Product__c);
             }
         }
         
@@ -256,17 +258,9 @@ public class OpportunityProductHelper {
         );
     
         // Step 3: Gather unique Product2 Ids and Pricebook2/Currency combinations
-        Set<Id> productIds = new Set<Id>();
-       	Set<Id> pricebookIds = new Set<Id>();
-    
+    	Set<Id> pricebookIds = new Set<Id>();
         for (Opportunity opp : oppMap.values()) {
             pricebookIds.add(opp.Pricebook2Id);
-        }
-        
-        for (OpportunityLineItem oli : oliNewList) {
-            if (oli.Product2Id != oli.Product__c) {
-                productIds.add(oli.Product__c);
-            }
         }
     
         // Step 4: Query all relevant PricebookEntry records
