@@ -10,5 +10,10 @@
     <columns>Revenue__c</columns>
     <columns>Opportunity_Product__c</columns>
     <filterScope>Everything</filterScope>
+    <filters>
+        <field>Deal_Name__c</field>
+        <operation>equals</operation>
+        <value>LGAM-PG-Detnsu CA-Kraft Heinz-Pure Jam-2024-ACR-English-TTD-30 :2: :006Ua00000Atf3BIAR</value>
+    </filters>
     <label>All</label>
 </ListView>
