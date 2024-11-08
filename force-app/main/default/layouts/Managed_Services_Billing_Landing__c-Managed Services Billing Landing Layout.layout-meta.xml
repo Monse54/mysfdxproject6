@@ -208,10 +208,6 @@
                 <behavior>Edit</behavior>
                 <field>Netsuite_ID__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Regenerate_Invoice__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -388,7 +384,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Amount_Changed__c</field>
+                <field>Regenerate_Invoice__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -397,10 +393,6 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Difference_in_Amount__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Status_Changed__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>

@@ -1450,6 +1450,13 @@
                     <stringValue>Exposure Logs</stringValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>$Record.Request_Issue_Type__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>Assign_Exposure_Log_list</targetReference>
             </connector>
