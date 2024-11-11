@@ -1759,6 +1759,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Deal__c.temp_del__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Deal_level_reporting__c.Deal__c</field>
         <readable>true</readable>
     </fieldPermissions>

@@ -167,6 +167,11 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>Revenue_Share__c</field>
+            <table>Deal__c.Deal_level_reporting__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>Id</field>
             <table>Deal__c.Deal_level_reporting__r</table>
         </columns>
@@ -213,11 +218,6 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Owner</field>
-            <table>Deal__c.Deal_level_reporting__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Revenue_Share__c</field>
             <table>Deal__c.Deal_level_reporting__r</table>
         </columns>
         <masterLabel>Deal level reporting</masterLabel>
