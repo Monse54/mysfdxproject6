@@ -380,10 +380,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Amount__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>Regenerate_Invoice__c</field>
             </layoutItems>
             <layoutItems>

@@ -38,17 +38,17 @@
             <name>If_Amount_field_was_modified</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.Amount__c</leftValueReference>
+                <leftValueReference>$Record.Revenue_Local__c</leftValueReference>
                 <operator>IsChanged</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>$Record.Amount__c</leftValueReference>
+                <leftValueReference>$Record.Revenue_Local__c</leftValueReference>
                 <operator>NotEqualTo</operator>
                 <rightValue>
-                    <elementReference>$Record__Prior.Amount__c</elementReference>
+                    <elementReference>$Record__Prior.Revenue_Local__c</elementReference>
                 </rightValue>
             </conditions>
             <connector>
@@ -61,7 +61,7 @@
     <formulas>
         <name>DifferenceinAmount</name>
         <dataType>Currency</dataType>
-        <expression>{!$Record.Amount__c}-{!$Record__Prior.Amount__c}</expression>
+        <expression>{!$Record.Revenue_Local__c}-{!$Record__Prior.Revenue_Local__c}</expression>
         <scale>0</scale>
     </formulas>
     <formulas>

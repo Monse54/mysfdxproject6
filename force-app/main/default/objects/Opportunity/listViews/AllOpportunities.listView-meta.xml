@@ -17,6 +17,11 @@
     <columns>CSM__c</columns>
     <columns>Seller_Region__c</columns>
     <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.One_Managed_Service</value>
+    </filters>
     <label>All Opportunities</label>
     <sharedTo>
         <group>Non_Media_Mint_User</group>
