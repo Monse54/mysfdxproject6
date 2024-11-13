@@ -6,6 +6,9 @@
         <label>Check Account, Primary Agency, or Agency of Record</label>
         <locationX>182</locationX>
         <locationY>287</locationY>
+        <defaultConnector>
+            <targetReference>Check_Client_Direct</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Is_Reseller_Type</name>
@@ -37,6 +40,81 @@
             <label>Is Reseller Type</label>
         </rules>
     </decisions>
+    <decisions>
+        <name>Check_Client_Direct</name>
+        <label>Check Client Direct</label>
+        <locationX>182</locationX>
+        <locationY>587</locationY>
+        <defaultConnector>
+            <targetReference>Check_Default_Billing_Ad_Server</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Profile.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Partner Resellers Profile</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Client_Direct__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner.Profile.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Partner Resellers Profile</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Client_Direct</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Default_Billing_Ad_Server</name>
+        <label>Check Default Billing Ad Server</label>
+        <locationX>182</locationX>
+        <locationY>887</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Profile.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Partner Resellers Profile</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner.Profile.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Partner Resellers Profile</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Default_Billing_Ad_Server__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>1st Party</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>update_1st_party</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
     <environments>Default</environments>
     <interviewLabel>Opp after save trigger {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Opp after save trigger(block reseller)</label>
@@ -60,10 +138,42 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordUpdates>
+        <name>update_1st_party</name>
+        <label>update 1st party</label>
+        <locationX>50</locationX>
+        <locationY>995</locationY>
+        <inputAssignments>
+            <field>Default_Billing_Ad_Server__c</field>
+            <value>
+                <stringValue>1st Party</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Client_Direct</name>
+        <label>Update Client Direct</label>
+        <locationX>50</locationX>
+        <locationY>695</locationY>
+        <connector>
+            <targetReference>Check_Default_Billing_Ad_Server</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Client_Direct__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
         <name>Update_Reseller_Opportunity_Field</name>
         <label>Update Reseller Opportunity Field</label>
         <locationX>50</locationX>
         <locationY>395</locationY>
+        <connector>
+            <targetReference>Check_Client_Direct</targetReference>
+        </connector>
         <inputAssignments>
             <field>Partner_Type__c</field>
             <value>

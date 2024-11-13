@@ -2709,11 +2709,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Managed_Services_Billing_Landing__c.Amount__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Managed_Services_Billing_Landing__c.Approval_Status__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -3900,11 +3895,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Programmatic_Billing_Landing__c.Amount_Changed__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Programmatic_Billing_Landing__c.Amount__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>

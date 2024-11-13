@@ -2,12 +2,12 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>MS_Amount_Different__c</fullName>
     <formula>IF(
-    AND(
-        Amount__c &gt; 0,
-        Amount__c !=  MS_Billing_Landing__r.Amount__c 
-    ),
-    TRUE,
-    FALSE
+AND(
+Amount__c &gt; 0,
+Amount__c != MS_Billing_Landing__r.Billable_Revenue__c
+),
+TRUE,
+FALSE
 )</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>MS Amount Different</label>

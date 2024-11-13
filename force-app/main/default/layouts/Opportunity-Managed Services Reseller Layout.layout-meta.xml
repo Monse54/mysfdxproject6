@@ -111,7 +111,7 @@
                 <field>StageName</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>Probability</field>
             </layoutItems>
         </layoutColumns>
@@ -164,7 +164,7 @@
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>Default_Billing_Ad_Server__c</field>
             </layoutItems>
             <layoutItems>
@@ -494,7 +494,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00hUa000000m4z0</masterLabel>
+        <masterLabel>00hVC000001qZh3</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

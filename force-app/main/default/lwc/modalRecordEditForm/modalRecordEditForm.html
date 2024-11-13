@@ -13,6 +13,33 @@
       </div>
     </template>
     <div if:false={showEdit}>
+     <div class="slds-p-around_medium">
+        <!-- Heading -->
+        <!-- <h2 class="slds-text-heading_medium slds-text-color_success slds-m-bottom_small">
+            Set Date and Time Ranges
+        </h2> -->
+
+        <!-- Input fields in a single row -->
+        <div class="slds-grid slds-gutters slds-wrap">
+            <lightning-input type="datetime-local" label="Start Date"
+                value={startInputDate}
+                onchange={handleStartDateChange}
+                class="slds-col slds-size_1-of-3">
+            </lightning-input>
+
+            <lightning-input type="datetime-local" label="End Date"
+                value={endInputDate}
+                onchange={handleEndDateChange}
+                class="slds-col slds-size_1-of-3">
+            </lightning-input>
+
+            <lightning-input type="datetime-local" label="Max End Time Extension"
+                value={maxInputDate}
+                onchange={handleMaxDateChange}
+                class="slds-col slds-size_1-of-3">
+            </lightning-input>
+        </div>
+    </div>
 	<lightning-record-form object-api-name={objectName} columns="2" fields={Fields} onsubmit={handleSubmit} mode="edit"
 		record-id={recId} onerror={handleError} onsuccess={closePopupSuccess} oncancel={closePopup}>
 	</lightning-record-form>

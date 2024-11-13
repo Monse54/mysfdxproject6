@@ -1,6 +1,7 @@
-import { api } from 'lwc';
+import { api,track } from 'lwc';
 import LightningModal from 'lightning/modal';
 import getPricebook from '@salesforce/apex/ShowOpportunityProductDataController.getPricebook';
+import getExactDateTime from "@salesforce/apex/ShowOpportunityProductDataController.getExactDateTime";
 export default class ModalRecordEditForm extends LightningModal {
   @api Fields;
   @api objectName;
@@ -8,6 +9,7 @@ export default class ModalRecordEditForm extends LightningModal {
   @api layoutName;
   @api relatedrecId;
   @api recId;
+  @track productid;
   @api showEdit;
   showmodal = true;
   showspinner = false;
@@ -15,11 +17,22 @@ export default class ModalRecordEditForm extends LightningModal {
   errorMessage = '';
   errors; 
   pricebookId;
+  @track startInputDate;
+  @track endInputDate;
+  @track maxInputDate;
 
+  handleStartDateChange(event) {
+    this.startInputDate = event.target.value;
+  }
 
+  handleEndDateChange(event) {
+    this.endInputDate = event.target.value;
+  }
 
-  connectedCallback() {
-
+  handleMaxDateChange(event) {
+    this.maxInputDate = event.target.value;
+  }
+connectedCallback() {
         // Get a reference to the input element
         const inputField = this.template.querySelector('#combobox-input-1001');
         // Check if the element exists (to avoid errors)
@@ -29,9 +42,6 @@ export default class ModalRecordEditForm extends LightningModal {
         }
 
         this.Fields = JSON.parse((JSON.stringify(this.Fields)).replace("Product2Id","Product__c"));
-
-        console.log(JSON.parse((JSON.stringify(this.Fields))));
-        
     }
   closePopupSuccess(event) {
     this.close(event.detail.id);
@@ -48,19 +58,24 @@ export default class ModalRecordEditForm extends LightningModal {
     }
 
    handleSubmit(event) {
-     
         event.preventDefault(); // stop the form from submitting
         const fields = event.detail.fields;
+        this.productid = fields.Product__c;
+        fields.Start_Date__c = this.startInputDate;
+        fields.End_Date__c = this.endInputDate;
+        fields.Max_Extension_Time__c = this.maxInputDate;
+        fields.Product2Id = this.productid; 
+        //alert('this.productid fields.Product2Id'+fields.Product2Id);
         if(this.objectName == 'OpportunityLineItem'){
-          this.showspinner = true;
+           this.showspinner = true;
            getPricebook({ oppId: this.relatedrecId , proId: fields.Product2Id })
           .then(result => {
             this.pricebookId = result;
             fields.Id = null;
-             fields.OpportunityId = this.relatedrecId; 
+            fields.OpportunityId = this.relatedrecId; 
             fields.PricebookEntryId =  this.pricebookId;
             this.template.querySelector('lightning-record-form').submit(fields);
-             this.showspinner = false;
+            this.showspinner = false;
           })
           .catch(error => {
             console.error('Error:', error);

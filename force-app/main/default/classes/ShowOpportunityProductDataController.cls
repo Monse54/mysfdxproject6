@@ -1,18 +1,24 @@
 public class ShowOpportunityProductDataController {
+    
+    @auraEnabled(cacheable=true)
+    public static list<opportunitylineitem> fetchcloningdates(String oliid){
+         return [select id, name, start_date__C,end_date__c,max_Extension_Time__c
+                                         from opportunitylineitem where id=: oliid];
+    }
+    
+    @AuraEnabled
+    public static DateTime getExactDateTime(Datetime dt) {
+
+		TimeZone userTimezone = UserInfo.getTimeZone();
+        Long offsetMinutes = userTimezone.getOffset(dt) / 60000;
+		Datetime gmtDatetime = dt.addMinutes(-offsetMinutes.intValue());
+        return gmtDatetime;
+    }
+    
     @AuraEnabled(cacheable=true)
     public static Boolean hasNotEditButtonPermission() {
         system.debug('FeatureManagement.checkPermission'+ FeatureManagement.checkPermission('IO_Placement_Not_Editable'));
         return FeatureManagement.checkPermission('IO_Placement_Not_Editable');
-    }
-
-    @AuraEnabled(cacheable=true)
-    public static Boolean deleteDisabled() {
-        
-        String ProfileName = [SELECT Id, Name FROM Profile WHERE Id = :UserInfo.getProfileId()].Name;
-        if(ProfileName.equals('Partner Resellers Profile')){
-            return true;
-        }
-        return false;
     }
     
     @AuraEnabled
@@ -632,7 +638,7 @@ throw new AuraHandledException(getFriendlyMessage(e));
     
     @AuraEnabled
     public static string getPricebook(Id oppId, Id proId) {
-        //try {
+        try {
             if (proId != null) {
                 Opportunity opp = [
                     SELECT Id, CurrencyIsoCode, Pricebook2Id
@@ -655,9 +661,9 @@ throw new AuraHandledException(getFriendlyMessage(e));
                 //throw new AuraHandledException('Please select Product');
                 return null;
             }
-        /*} catch (Exception e) {
+        } catch (Exception e) {
             throw new AuraHandledException(e.getMessage() + e.getStackTraceString());
-        }*/
+        }
     }
     
     @AuraEnabled

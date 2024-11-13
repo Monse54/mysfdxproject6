@@ -2712,11 +2712,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>Managed_Services_Billing_Landing__c.Amount__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>false</editable>
         <field>Managed_Services_Billing_Landing__c.Approval_Status__c</field>
         <readable>false</readable>
@@ -3908,11 +3903,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Programmatic_Billing_Landing__c.Amount__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Programmatic_Billing_Landing__c.Billing_Country__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -4822,7 +4812,7 @@
         <layout>Opportunity-Managed Services Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Opportunity-Managed Services Layout</layout>
+        <layout>Opportunity-Managed Services Reseller Layout</layout>
         <recordType>Opportunity.One_Managed_Service</recordType>
     </layoutAssignments>
     <layoutAssignments>

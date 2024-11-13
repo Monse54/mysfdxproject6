@@ -1,0 +1,28 @@
+<template>
+    <lightning-card>
+        <lightning-accordion allow-multiple-sections-open active-section-name="dateFieldsSection">
+            <lightning-accordion-section name="dateFieldsSection" label="Date Fields">
+                <div class="slds-grid slds-gutters">
+                    <lightning-input type="datetime-local" label="Start Date"
+                        value={startInputDate}
+                        onchange={handleStartDateChange}
+                        class="slds-col slds-size_1-of-3">
+                    </lightning-input>
+
+                    <lightning-input type="datetime-local" label="End Date"
+                        value={endInputDate}
+                        onchange={handleEndDateChange}
+                        class="slds-col slds-size_1-of-3">
+                    </lightning-input>
+
+                    <lightning-input type="datetime-local" label="Max End Time Extension"
+                        value={maxInputDate}
+                        onchange={handleMaxDateChange}
+                        class="slds-col slds-size_1-of-3">
+                    </lightning-input>
+                </div>
+                <lightning-button variant="brand" label="Save Changes" onclick={saveChanges} class="slds-m-top_medium"></lightning-button>
+            </lightning-accordion-section>
+        </lightning-accordion>
+    </lightning-card>
+</template>

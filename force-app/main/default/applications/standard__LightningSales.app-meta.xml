@@ -546,6 +546,24 @@
         <type>Flexipage</type>
         <profile>Media Mint User</profile>
     </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Managed_Services_Opportunity_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.One_Managed_Service</recordType>
+        <type>Flexipage</type>
+        <profile>TechOps</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Managed_Services_Opportunity_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.One_Managed_Service</recordType>
+        <type>Flexipage</type>
+        <profile>TechOps</profile>
+    </profileActionOverrides>
     <setupExperience>all</setupExperience>
     <tabs>standard-home</tabs>
     <tabs>standard-Lead</tabs>

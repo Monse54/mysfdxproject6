@@ -15,7 +15,33 @@
         {errormessage}
       </div>
     </template>
+    <div class="slds-p-around_medium">
+        <!-- Heading -->
+       <!--  <h2 class="slds-text-heading_medium slds-text-color_success slds-m-bottom_small">
+            Set Date and Time Ranges
+        </h2> -->
 
+        <!-- Input fields in a single row -->
+        <div class="slds-grid slds-gutters slds-wrap">
+            <lightning-input type="datetime-local" label="Start Date"
+                value={startInputDate}
+                onchange={handleStartDateChange}
+                class="slds-col slds-size_1-of-3">
+            </lightning-input>
+
+            <lightning-input type="datetime-local" label="End Date"
+                value={endInputDate}
+                onchange={handleEndDateChange}
+                class="slds-col slds-size_1-of-3">
+            </lightning-input>
+
+            <lightning-input type="datetime-local" label="Max End Time Extension"
+                value={maxInputDate}
+                onchange={handleMaxDateChange}
+                class="slds-col slds-size_1-of-3">
+            </lightning-input>
+        </div>
+    </div>
     <lightning-record-edit-form
       record-id={recId}
       object-api-name="OpportunityLineItem"
@@ -92,14 +118,14 @@
       </div>
       <div class="slds-grid">
         <div class="slds-col slds-size_1-of-2">
-          <lightning-input-field
+          <!-- <lightning-input-field
             field-name="Start_Date__c"
-          ></lightning-input-field>
+          ></lightning-input-field> -->
         </div>
         <div class="slds-col slds-size_1-of-2">
-          <lightning-input-field
+         <!--  <lightning-input-field
             field-name="End_Date__c"
-          ></lightning-input-field>
+          ></lightning-input-field> -->
         </div>
       </div>
       <div class="slds-grid">
@@ -173,9 +199,9 @@
         </div>
         <div class="slds-col slds-size_1-of-2">
          
-          <lightning-input-field
+          <!-- <lightning-input-field
             field-name="Max_Extension_Time__c"
-          ></lightning-input-field> 
+          ></lightning-input-field>  -->
         </div>
       </div>
       <div class="slds-grid">

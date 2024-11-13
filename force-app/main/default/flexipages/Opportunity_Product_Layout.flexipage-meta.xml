@@ -44,6 +44,12 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+                <componentName>displayExactDates</componentName>
+                <identifier>c_displayExactDates</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
                 <componentName>force:detailPanel</componentName>
                 <identifier>force_detailPanel</identifier>
             </componentInstance>

@@ -3,24 +3,28 @@
     <allowInternalUserLogin>false</allowInternalUserLogin>
     <allowMembersToFlag>false</allowMembersToFlag>
     <changePasswordTemplate>unfiled$public/CommunityChangePasswordEmailTemplate</changePasswordTemplate>
-    <communityRoles/>
-    <disableReputationRecordConversations>true</disableReputationRecordConversations>
+    <communityRoles>
+        <customerUserRole></customerUserRole>
+        <employeeUserRole></employeeUserRole>
+        <partnerUserRole>Partner Reseller</partnerUserRole>
+    </communityRoles>
+    <disableReputationRecordConversations>false</disableReputationRecordConversations>
     <emailSenderAddress>geeth@cloudforcegurus.com</emailSenderAddress>
     <emailSenderName>PartnerReseller</emailSenderName>
     <embeddedLoginEnabled>false</embeddedLoginEnabled>
-    <enableApexCDNCaching>true</enableApexCDNCaching>
+    <enableApexCDNCaching>false</enableApexCDNCaching>
     <enableCustomVFErrorPageOverrides>false</enableCustomVFErrorPageOverrides>
     <enableDirectMessages>true</enableDirectMessages>
     <enableExpFriendlyUrlsAsDefault>false</enableExpFriendlyUrlsAsDefault>
     <enableExperienceBundleBasedSnaOverrideEnabled>true</enableExperienceBundleBasedSnaOverrideEnabled>
     <enableGuestChatter>false</enableGuestChatter>
     <enableGuestFileAccess>false</enableGuestFileAccess>
-    <enableGuestMemberVisibility>false</enableGuestMemberVisibility>
+    <enableGuestMemberVisibility>true</enableGuestMemberVisibility>
     <enableImageOptimizationCDN>true</enableImageOptimizationCDN>
     <enableInvitation>false</enableInvitation>
     <enableKnowledgeable>false</enableKnowledgeable>
     <enableLWRExperienceConnectedApp>false</enableLWRExperienceConnectedApp>
-    <enableMemberVisibility>false</enableMemberVisibility>
+    <enableMemberVisibility>true</enableMemberVisibility>
     <enableNicknameDisplay>true</enableNicknameDisplay>
     <enablePrivateMessages>false</enablePrivateMessages>
     <enableReputation>false</enableReputation>
@@ -35,6 +39,7 @@
     <headlessForgotPasswordTemplate>unfiled$public/CommunityHeadlessForgotPasswordTemplate</headlessForgotPasswordTemplate>
     <headlessRegistrationTemplate>unfiled$public/CommunityHeadlessRegistrationTemplate</headlessRegistrationTemplate>
     <networkMemberGroups>
+        <permissionSet>View_All_Users</permissionSet>
         <profile>Admin</profile>
         <profile>Partner Resellers Profile</profile>
         <profile>Salesforce API Only System Integrations</profile>
@@ -47,7 +52,7 @@
         <profile>Chatter Free User</profile>
         <profile>Identity User</profile>
         <profile>Minimum Access - Salesforce</profile>
-        <profile>Analytics Cloud Integration User</profile>
+        <profile>Read Only</profile>
         <profile>SolutionManager</profile>
         <profile>MarketingProfile</profile>
         <profile>ContractManager</profile>
@@ -60,7 +65,7 @@
         <profile>VP Sales</profile>
         <profile>Account Management</profile>
         <profile>Media Mint User</profile>
-        <profile>Read Only</profile>
+        <profile>Analytics Cloud Integration User</profile>
         <profile>Analytics Cloud Security User</profile>
     </networkMemberGroups>
     <networkPageOverrides>

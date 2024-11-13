@@ -117,8 +117,6 @@ export default class ShowOpportunityProductAndOperationalData extends Navigation
     Audience_Targeting__c,
     Type__c,
     Audience_Segment_Details__c,
-    stardate,
-    endDate,
     Country__c,
     Buy_Type__c,
     rate,
@@ -130,7 +128,6 @@ export default class ShowOpportunityProductAndOperationalData extends Navigation
     Rolling_Time_Zone__c,
     Reason__c,
     RB_Extension_info__c,
-    Max_Extension_Time__c,
     BETA_Program__c
   ];
 

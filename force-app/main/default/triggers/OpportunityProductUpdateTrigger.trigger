@@ -403,7 +403,7 @@ update mapOpp.values();
         String userProfile = [SELECT Name FROM Profile WHERE Id IN (SELECT ProfileId FROM User WHERE Id = :userId)].Name;
         Set<String> restrictedStages = new Set<String>{'Waiting on Assets - Closed Won', 'Closed Won'};
             
-            if (userProfile != 'System Administrator') {
+            if (userProfile != 'System Administrator' || userProfile != 'TechOps') {
                 for (OpportunityLineItem oli : Trigger.old) {
                     // restrictedStages.contains(oppStageMap.get(oli.OpportunityId)
                     
